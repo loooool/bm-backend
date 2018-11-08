@@ -24,7 +24,10 @@ Route::post('verify', 'VerifyController@store')->name('verify');
 
 Route::get('/models/a', function () {
    return view('models.a');
-});
+})->name('a');
+Route::get('/models/b', function () {
+   return view('models.b');
+})->name('b');
 Route::get('/models', function () {
     return view('models');
 })->name('models');

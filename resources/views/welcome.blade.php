@@ -2,11 +2,6 @@
 @section('header')
     @endsection
 @section('menu')
-    <nav>
-
-        <a class="mobile-menu-button" href="#"><i class="decode-icon-menu"></i></a>
-
-        <ul class="menu clearfix" id="menu">
             <li class="megamenu active">
                 <a href="{{route('welcome')}} ">Танилцуулга</a>
             </li>
@@ -20,9 +15,6 @@
                 <a href="aboutus.html">Гүйцэтгэгч</a>
 
             </li>
-        </ul>
-
-    </nav>
     @endsection
 @section('content')
 

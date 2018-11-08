@@ -82,8 +82,17 @@
                 </div><!-- col -->
                 <div class="col-md-9">
 
+                    <nav>
+
+                        <a class="mobile-menu-button" href="#"><i class="decode-icon-menu"></i></a>
+
+                        <ul class="menu clearfix" id="menu">
+                            @yield('menu')
+                        </ul>
+
+                    </nav>
                     <!-- MENU -->
-                    @yield('menu')
+
 
                 </div><!-- col -->
             </div><!-- row -->
