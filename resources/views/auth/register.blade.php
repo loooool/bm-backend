@@ -166,6 +166,7 @@
                         </div>
 
                         <br>
+                        <input type="text" name="country" value="mn">
                         <div class="form-group row mb-0">
                             <div class="col-md-10 offset-md-1">
                                 <button type="submit" class="btn btn-md btn-primary btn-block">

@@ -15,6 +15,7 @@ class HomeController extends Controller
     {
         $this->middleware('auth');
         $this->middleware('verification');
+        $this->middleware('Administrator');
     }
 
     /**

@@ -15,7 +15,27 @@ Route::get('/', function () {
     return view('welcome');
 })->name('welcome');
 
-Auth::routes();
+Route::get('god', [
+    'as' => 'login',
+    'uses' => 'Auth\LoginController@showLoginForm'
+]);
+Route::post('god', [
+    'as' => '',
+    'uses' => 'Auth\LoginController@login'
+]);
+Route::get('byegod', [
+    'as' => 'logout',
+    'uses' => 'Auth\LoginController@logout'
+]);
+
+Route::get('register', [
+    'as' => 'register',
+    'uses' => 'Auth\RegisterController@showRegistrationForm'
+]);
+Route::post('register', [
+    'as' => '',
+    'uses' => 'Auth\RegisterController@register'
+]);
 
 Route::get('/home', 'HomeController@index')->name('home');
 

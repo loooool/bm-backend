@@ -38,17 +38,6 @@
         <div class="col-md-6">
             <div class="card-box">
                 <ul class="nav nav-tabs tabs-bordered nav-justified">
-                    <li class="nav-item">
-                        <a href="{{url('login')}}" data-toggle="tab" aria-expanded="true" class="nav-link active">
-                            Нэвтрэх
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="{{url('register')}}" data-toggle="tab" aria-expanded="false" class="nav-link">
-                            Бүртгүүлэх
-                        </a>
-                    </li>
-
                 </ul>
                 <div class="row">
                     <div class="col-md-1"></div>
