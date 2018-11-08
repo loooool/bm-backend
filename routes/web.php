@@ -34,4 +34,6 @@ Route::get('/models', function () {
 Route::get('/reg', function () {
     return view('register');
 })->name('reg');
-//Route::get
+//Route::get('/contract', function (){
+//
+//});
