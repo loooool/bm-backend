@@ -31,4 +31,7 @@ Route::get('/models/b', function () {
 Route::get('/models', function () {
     return view('models');
 })->name('models');
+Route::get('/reg', function () {
+    return view('register');
+})->name('reg');
 //Route::get
