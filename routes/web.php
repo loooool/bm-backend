@@ -13,7 +13,7 @@
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('welcome');
 
 Auth::routes();
 
@@ -22,9 +22,10 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('verify', 'VerifyController@index')->name('verify');
 Route::post('verify', 'VerifyController@store')->name('verify');
 
-Route::get('/test', function () {
-   $code = "+976";
-   $phone = "95520083";
-   $phone_number =  $code . $phone;
-   echo $phone_number;
+Route::get('/models/a', function () {
+   return view('models.a');
 });
+Route::get('/models', function () {
+    return view('models');
+})->name('models');
+//Route::get

@@ -1,23 +1,148 @@
-@extends('layouts.app')
+@extends('layouts.main')
+@section('header')
+    <link href="{{asset('plugins/jquery-circliful/css/jquery.circliful.css')}}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.min.js">
+    <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+    <style>
+        svg, defs, clipPath {
+            height: 0;
+            position: absolute;
+            top: 0; left: 0;
+        }
 
+        #figura {
+            position: relative;
+            width: 700px; height: 525px;
+            margin: 10px auto;
+            overflow: hidden;
+            background-color: white;
+            border-radius: 20px;
+        }
+        #figura::before {
+            display: block;
+            content: "";
+            position: absolute;
+            top: 0; left: 0;
+            background-image: url('{{asset('assets/images/pyramid_min.jpg')}}');
+            background-size: cover;
+            opacity: .4;
+            width: 700px; height: 525px;
+        }
+
+        #capaRecorte {
+            display: block;
+            position: absolute;
+            top: 0; left: 0;
+            width: 700px; height: 525px;
+        }
+
+        #imagen {
+            width: 700px; height: 525px;
+            position: absolute;
+            top: 0; left: 0;
+            cursor: crosshair;
+        }
+
+        #figura area {
+            display: block;
+        }
+
+        #figura area:nth-of-type(1):hover ~ #capaRecorte {
+            -webkit-clip-path: polygon(257px 485px,249px 492px,224px 479px,218px 485px,138px 438px,116px 425px,45px 331px,26px 321px,51px 296px,60px 300px,71px 291px,68px 286px,96px 259px,94px 253px,129px 217px,151px 226px,154px 233px,180px 246px,183px 243px,230px 265px,226px 272px,228px 276px,231px 275px,243px 280px,246px 278px,259px 283px,264px 281px,307px 301px,293px 321px,304px 392px,306px 407px,303px 421px,294px 439px,274px 470px,265px 482px);
+            clip-path: url(#A1);
+        }
+
+        #figura area:nth-of-type(2):hover ~ #capaRecorte {
+            -webkit-clip-path: polygon(307px 301px,265px 281px,260px 283px,256px 276px,230px 154px,218px 140px,250px 124px,250px 115px,282px 101px,296px 114px,312px 107px,311px 103px,317px 99px,309px 89px,337px 75px,342px 82px,368px 69px,383px 83px,383px 93px,387px 98px,392px 96px,409px 110px,413px 108px,443px 134px,432px 142px,417px 262px,385px 282px,390px 287px,388px 299px,392px 306px,379px 312px,370px 306px,358px 313px,350px 303px,305px 327px,296px 320px,295px 318px);
+            clip-path: url(#B1);
+        }
+
+        #figura area:nth-of-type(3):hover ~ #capaRecorte {
+            -webkit-clip-path: polygon(433px 125px,435px 116px,439px 112px,429px 102px,462px 84px,466px 88px,486px 77px,491px 79px,496px 76px,498px 66px,517px 57px,538px 72px,546px 68px,571px 85px,558px 94px,564px 98px,562px 104px,575px 112px,595px 102px,624px 122px,620px 130px,651px 153px,634px 165px,574px 284px,515px 323px,471px 289px,463px 291px,453px 285px,445px 290px,433px 280px,437px 271px,438px 262px,443px 259px,421px 241px);
+            clip-path: url(#A2);
+        }
+
+
+
+    </style>
+
+@endsection
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Dashboard</div>
+    <!-- Start content -->
+    <div class="content">
+        <div class="container-fluid">
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    You are logged in!
+            <!-- Page-Title -->
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="page-title-box">
+                        <h4 class="page-title">Pyramid Apartment - Та блокоо сонгоно уу</h4>
+                        <ol class="breadcrumb float-right">
+                            <li class="breadcrumb-item">Bodygram</li>
+                        </ol>
+                        <div class="clearfix"></div>
+                    </div>
                 </div>
             </div>
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8 text-center">
+                    <div class="image-map-container">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1"  >
+                            <defs>
+                                <clipPath id=A1>
+                                    <polygon points="257 485,249 492,224 479,218 485,138 438,116 425,45 331,26 321,51 296,60 300,71 291,68 286,96 259,94 253,129 217,151 226,154 233,180 246,183 243,230 265,226 272,228 276,231 275,243 280,246 278,259 283,264 281,307 301,293 321,304 392,306 407,303 421,294 439,274 470,265 482"></polygon>
+                                </clipPath>
+                                <clipPath id=B1>
+                                    <polygon points="307 301,265 281,260 283,256 276,230 154,218 140,250 124,250 115,282 101,296 114,312 107,311 103,317 99,309 89,337 75,342 82,368 69,383 83,383 93,387 98,392 96,409 110,413 108,443 134,432 142,417 262,385 282,390 287,388 299,392 306,379 312,370 306,358 313,350 303,305 327,296 320,295 318"></polygon>
+                                </clipPath>
+                                <clipPath id=A2>
+                                    <polygon points="433 125,435 116,439 112,429 102,462 84,466 88,486 77,491 79,496 76,498 66,517 57,538 72,546 68,571 85,558 94,564 98,562 104,575 112,595 102,624 122,620 130,651 153,634 165,574 284,515 323,471 289,463 291,453 285,445 290,433 280,437 271,438 262,443 259,421 241"></polygon>
+                                </clipPath>
+                            </defs>
+                        </svg>
+
+                        <figure id=figura title="Augusto Warnke.">
+                            <map name=recortes id=recortes>
+                                <area shape=poly data-toggle="tooltip" title="A Block 2020/09/21"
+                                      coords="257,485,249,492,224,479,218,485,138,438,116,425,45,331,26,321,51,296,60,300,71,291,68,286,96,259,94,253,129,217,151,226,154,233,180,246,183,243,230,265,226,272,228,276,231,275,243,280,246,278,259,283,264,281,307,301,293,321,304,392,306,407,303,421,294,439,274,470,265,482" target="_blank"
+                                      href="https://photos.app.goo.gl/BYwuZ9awSTf1V1kT2" >
+                                <area shape=poly data-toggle="tooltip" title="B Block 2019/09/21"
+                                      coords="307,301,265,281,260,283,256,276,230,154,218,140,250,124,250,115,282,101,296,114,312,107,311,103,317,99,309,89,337,75,342,82,368,69,383,83,383,93,387,98,392,96,409,110,413,108,443,134,432,142,417,262,385,282,390,287,388,299,392,306,379,312,370,306,358,313,350,303,305,327,296,320,295,318"
+                                      href="https://photos.app.goo.gl/BYwuZ9awSTf1V1kT2" >
+                                <area shape=poly data-toggle="tooltip" title="C Block 2019/08/21"
+                                      coords="433,125,435,116,439,112,429,102,462,84,466,88,486,77,491,79,496,76,498,66,517,57,538,72,546,68,571,85,558,94,564,98,562,104,575,112,595,102,624,122,620,130,651,153,634,165,574,284,515,323,471,289,463,291,453,285,445,290,433,280,437,271,438,262,443,259,421,241"
+                                      href="https://photos.app.goo.gl/BYwuZ9awSTf1V1kT2" >
+
+                                <img id=capaRecorte src="{{asset('assets/images/pyramid_min.jpg')}}" >
+                            </map>
+
+                            <img src="https://lh3.googleusercontent.com/-HqFCpcmlv1U/VjZqE6e7u0I/AAAAAAAAGao/hIQohrsu0xI/s800-Ic42/transparente.gif"
+                                 id=imagen alt="" usemap=#recortes >
+
+                        </figure>
+                        <div class="map-selector">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+
+
+
+
+
         </div>
-    </div>
-</div>
-@endsection
+        <div class="row">
+
+
+        </div>
+    @endsection
+    @section('footer')
+        <!-- Counter Up  -->
+
+    @endsection
