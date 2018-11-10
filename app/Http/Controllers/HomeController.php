@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Counter;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -25,6 +27,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $user = Auth::user();
+        $counter = Counter::find(1);
+        return view('home', compact('user','counter'));
+    }
+    public function info(){
+        $
     }
 }

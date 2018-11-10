@@ -7,12 +7,12 @@
 
                 <li>
                     <a href="{{route('home')}}" class="waves-effect waves-primary"><i
-                                class=" mdi mdi-scale-bathroom"></i><span> Байр захиалга </span></a>
+                                class=" mdi mdi-scale-bathroom"></i><span> Мэдээллийн самбар </span></a>
                 </li>
 
                 <li>
                     <a href="#" class="waves-effect waves-primary"><i
-                                class=" ti-calendar"></i><span> Данс хуулга </span></a>
+                                class=" ti-calendar"></i><span> Хэрэглэгчид</span></a>
                 </li>
 
 

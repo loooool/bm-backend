@@ -11,7 +11,14 @@
 |
 */
 
+use App\Counter;
+use Illuminate\Support\Facades\Auth;
+
 Route::get('/', function () {
+    $user = Auth::user();
+    $counter = Counter::find(1);
+    $counter->views = $counter->views + 1;
+    $counter->save();
     return view('welcome');
 })->name('welcome');
 

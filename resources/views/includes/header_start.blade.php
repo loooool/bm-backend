@@ -6,4 +6,4 @@
 
 <link rel="shortcut icon" href="{{asset('')}}assets/images/favicon.ico">
 
-<title>Bodygram</title>
+<title>Pyramid Apartment</title>
