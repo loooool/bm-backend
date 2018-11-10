@@ -4,7 +4,7 @@
     <!-- LOGO -->
     <div class="topbar-left">
         <div class="text-center">
-            <a href="index.html" class="logo"><i class="mdi mdi-radar"></i> <span>Pyramid </span></a>
+            <a href="{{route('login')}}" class="logo"><i class="mdi mdi-radar"></i> <span>Pyramid </span></a>
         </div>
     </div>
 

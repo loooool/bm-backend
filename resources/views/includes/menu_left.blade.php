@@ -11,7 +11,7 @@
                 </li>
 
                 <li>
-                    <a href="#" class="waves-effect waves-primary"><i
+                    <a href="{{route('usr')}}" class="waves-effect waves-primary"><i
                                 class=" ti-calendar"></i><span> Хэрэглэгчид</span></a>
                 </li>
 
@@ -21,7 +21,7 @@
                 <li class="menu-title">Үйлдэл</li>
 
                 <li>
-                    <a href="#" class="waves-effect waves-primary" >
+                    <a href="{{route('logout')}}" class="waves-effect waves-primary" >
                         <i class=" ti-power-off"></i><span> Гарах </span></a>
                 </li>
 

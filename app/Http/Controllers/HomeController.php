@@ -31,7 +31,4 @@ class HomeController extends Controller
         $counter = Counter::find(1);
         return view('home', compact('user','counter'));
     }
-    public function info(){
-        $
-    }
 }

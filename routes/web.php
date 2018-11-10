@@ -27,9 +27,10 @@ Route::get('god', [
     'uses' => 'Auth\LoginController@showLoginForm'
 ]);
 Route::post('god', [
-    'as' => '',
+    'as' => 'login',
     'uses' => 'Auth\LoginController@login'
 ]);
+
 Route::get('byegod', [
     'as' => 'logout',
     'uses' => 'Auth\LoginController@logout'
@@ -45,6 +46,8 @@ Route::post('register', [
 ]);
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home/users', 'AdminUserController@index')->name('usr');
+
 
 Route::get('verify', 'VerifyController@index')->name('verify');
 Route::post('verify', 'VerifyController@store')->name('verify');
@@ -108,6 +111,4 @@ Route::get('/block/c', function () {
 Route::get('/floor', function () {
     return view('floor');
 })->name('floor');
-//Route::get('/contract', function (){
-//
-//});
+
