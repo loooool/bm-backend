@@ -117,7 +117,9 @@
                     </div>
                 </div>
             </div>
-            <button class="btn btn-block btn-black">Онлайн захиалга өгөх<br>1,950,000₮/мкв</button>
+            <a href="{{url("/models/choose/b")}}">
+                <button class="btn btn-block btn-black" >Онлайн захиалга өгөх<br>1,950,000₮/мкв</button>
+            </a>
             <!--            row-n div-->
             <img src="{{asset('front/assets/images/4-12.jpg')}}">
         </div>
