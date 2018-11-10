@@ -90,24 +90,44 @@ Route::get('/block', function () {
 
 //Block a
 Route::get('/block/a', function () {
-    session()->put('block', 'a');
+    session()->put('block', '1');
+    return redirect(route('floor'));
 })->name('block_a');
 
 //Block b
 Route::get('/block/b', function () {
-    session()->put('block', 'b');
+    session()->put('block', '2');
+    return redirect(route('floor'));
 })->name('block_b');
 
 //Block c
 Route::get('/block/c', function () {
-    session()->put('block', 'c');;
+    session()->put('block', '3');
+    return redirect(route('floor'));
 })->name('block_c');
 
 
 //------FLOORS------
 Route::get('/floor', function () {
+    if (session('design') != null) {
+        if (session('block') != null) {
+            $design = \App\Design::find(session('design'));
+            $block = session('block');
+            return view('floor', compact('design', 'block'));
+        } else {
+            return redirect(route('block'));
+        }
+    } else {
+        return redirect(route('models'));
+    }
     return view('floor');
 })->name('floor');
-//Route::get('/contract', function (){
-//
-//});
+
+
+//------REGISTER------
+Route::get('reg', [
+    'as' => 'reg',
+    'uses' => 'UserRegisterController@index'
+]);
+Route::post('reg', ['as' => '', 'uses' => 'UserRegisterController@store']);
+

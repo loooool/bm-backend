@@ -117,10 +117,9 @@
                                             <div class="col-md-6">
                                                 <input id="lastname" type="text" class="form-control" name="last_name"  required placeholder="Овог*">
 
-                                            <!--@if ($errors->has('last_name'))-->
-                                                <!--<span class="invalid-feedback" role="alert">-->
-                                            <!--<strong>{{ $errors->first('last_name') }}</strong>-->
-                                                <!--@endif-->
+                                                <span class="invalid-feedback" role="alert">
+                                               <strong>fdsafdas</strong>
+                                           </span>
                                             </div>
                                             <div class="col-md-6">
                                                 <input id="name" type="text" class="form-control" name="name"  required placeholder="Нэр*">
