@@ -166,11 +166,11 @@
     </div>
 
     <!-- end slider-->
-    @endsection
+@endsection
 @section('footer')
     <script>
         function hoverText(txt) {
             document.getElementById("blocka").innerHTML = txt;
         }
     </script>
-    @endsection
+@endsection

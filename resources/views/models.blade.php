@@ -83,9 +83,9 @@
                     <!--start-->
                     <div class="image-box wow fadeInUp">
                         <div class="image-box-thumbnail">
-                            <a href="b.html"><img src="{{asset('front/assets/images/69.73.jpg')}}" alt=""></a>
+                            <a href="{{route('b')}}"><img src="{{asset('front/assets/images/69.73.jpg')}}" alt=""></a>
                         </div><!-- image-box-thumbnail -->
-                        <h5><a href="b.html">B загвар</a></h5>
+                        <h5><a href="{{route('b')}}">B загвар</a></h5>
                         <div class="row">
                             <div class="col-md-6 text-center">69.73<br>мкв</div>
                             <div class="col-md-6 text-center">3 <br>өрөө</div>
