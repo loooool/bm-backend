@@ -21,7 +21,7 @@
             content: "";
             position: absolute;
             top: 0; left: 0;
-            background-image: url('{{asset('front/assets/images/pyramid_min.jpg')}}');
+            background-image: url('{{asset('front/assets/images/floor.jpg')}}');
             background-size: cover;
             opacity: .4;
             width: 700px; height: 525px;
@@ -46,19 +46,54 @@
         }
 
         #figura area:nth-of-type(1):hover ~ #capaRecorte {
-            -webkit-clip-path: polygon(257px 485px,249px 492px,224px 479px,218px 485px,138px 438px,116px 425px,45px 331px,26px 321px,51px 296px,60px 300px,71px 291px,68px 286px,96px 259px,94px 253px,129px 217px,151px 226px,154px 233px,180px 246px,183px 243px,230px 265px,226px 272px,228px 276px,231px 275px,243px 280px,246px 278px,259px 283px,264px 281px,307px 301px,293px 321px,304px 392px,306px 407px,303px 421px,294px 439px,274px 470px,265px 482px);
-            clip-path: url(#A1);
+            -webkit-clip-path: polygon( 217px 83px, 602px 85px, 602px 120px ,217px 118px);
+            clip-path: url(#F1);
         }
-
         #figura area:nth-of-type(2):hover ~ #capaRecorte {
-            -webkit-clip-path: polygon(307px 301px,265px 281px,260px 283px,256px 276px,230px 154px,218px 140px,250px 124px,250px 115px,282px 101px,296px 114px,312px 107px,311px 103px,317px 99px,309px 89px,337px 75px,342px 82px,368px 69px,383px 83px,383px 93px,387px 98px,392px 96px,409px 110px,413px 108px,443px 134px,432px 142px,417px 262px,385px 282px,390px 287px,388px 299px,392px 306px,379px 312px,370px 306px,358px 313px,350px 303px,305px 327px,296px 320px,295px 318px);
-            clip-path: url(#B1);
+            -webkit-clip-path: polygon(217px 118px,602px 119px,603px 154px,217px 153px);
+            clip-path: url(#F2);
+        }
+        #figura area:nth-of-type(3):hover ~ #capaRecorte {
+            -webkit-clip-path: polygon(217px 154px,603px 155px,604px 187px,217px 188px);
+            clip-path: url(#F3);
+        }
+        #figura area:nth-of-type(4):hover ~ #capaRecorte {
+            -webkit-clip-path: polygon(218px 189px,603px 188px,603px 223px,217px 222px);
+            clip-path: url(#F4);
+        }
+        #figura area:nth-of-type(5):hover ~ #capaRecorte {
+            -webkit-clip-path: polygon(217px 223px,604px 224px,605px 258px,217px 257px);
+            clip-path: url(#F5);
+        }
+        #figura area:nth-of-type(6):hover ~ #capaRecorte {
+            -webkit-clip-path: polygon(217px 258px,605px 257px,604px 292px,218px 291px);
+            clip-path: url(#F6);
+        }
+        #figura area:nth-of-type(7):hover ~ #capaRecorte {
+            -webkit-clip-path: polygon(217px 291px,603px 293px,604px 324px,217px 324px);
+            clip-path: url(#F7);
+        }
+        #figura area:nth-of-type(8):hover ~ #capaRecorte {
+            -webkit-clip-path: polygon(219px 324px,603px 323px,604px 360px, 219px 359px);
+            clip-path: url(#F8);
+        }
+        #figura area:nth-of-type(9):hover ~ #capaRecorte {
+            -webkit-clip-path: polygon(219px 359px,604px 361px,604px 394px,219px 394px);
+            clip-path: url(#F9);
+        }
+        #figura area:nth-of-type(10):hover ~ #capaRecorte {
+            -webkit-clip-path: polygon(220px 394px,604px 395px,604px 428px,219px 427px);
+            clip-path: url(#F10);
+        }
+        #figura area:nth-of-type(11):hover ~ #capaRecorte {
+            -webkit-clip-path: polygon(220px 428px,604px 428px,603px 465px,220px 462px);
+            clip-path: url(#F11);
+        }
+        #figura area:nth-of-type(12):hover ~ #capaRecorte {
+            -webkit-clip-path: polygon(220px 463px,604px 464px,604px 499px,221px 496px);
+            clip-path: url(#F12);
         }
 
-        #figura area:nth-of-type(3):hover ~ #capaRecorte {
-            -webkit-clip-path: polygon(433px 125px,435px 116px,439px 112px,429px 102px,462px 84px,466px 88px,486px 77px,491px 79px,496px 76px,498px 66px,517px 57px,538px 72px,546px 68px,571px 85px,558px 94px,564px 98px,562px 104px,575px 112px,595px 102px,624px 122px,620px 130px,651px 153px,634px 165px,574px 284px,515px 323px,471px 289px,463px 291px,453px 285px,445px 290px,433px 280px,437px 271px,438px 262px,443px 259px,421px 241px);
-            clip-path: url(#A2);
-        }
 
 
 
@@ -83,8 +118,8 @@
     <div class="container">
         <div class="row" style="margin-top: 30px">
             <div class="col-md-2 text-center"><h5 class="text-secondary">ЗАГВАР</h5></div>
-            <div class="col-md-2 text-center"><h5 >БЛОК</h5></div>
-            <div class="col-md-2 text-center"><h5 class="text-secondary">ДАВХАР</h5></div>
+            <div class="col-md-2 text-center"><h5 class="text-secondary">БЛОК</h5></div>
+            <div class="col-md-2 text-center"><h5 >ДАВХАР</h5></div>
             <div class="col-md-2 text-center"><h5 class="text-secondary">БҮРТГҮҮЛЭХ</h5></div>
             <div class="col-md-2 text-center"><h5 class="text-secondary">ГЭРЭЭ</h5></div>
             <div class="col-md-2 text-center"><h5 class="text-secondary">БАТАЛГААЖУУЛАХ</h5></div>
@@ -92,7 +127,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="progress">
-                    <div class="progress-bar" data-width="33">
+                    <div class="progress-bar" data-width="48">
                     </div><!-- progress-bar -->
                 </div><!-- progress -->
             </div><!-- col-->
@@ -107,7 +142,7 @@
 
 
         <h6>PYRAMID APARTMENT</h6>
-        <h3 id="blocka">БЛОК СОНГОХ</h3>
+        <h3 id="blocka">ДАВХАР СОНГОХ</h3>
         <br>
 
 
@@ -120,37 +155,98 @@
             <table class="table">
                 <tr>
                     <td>{{$design->name}}</td>
+                    @if($block == 1)
+                        <td>A блок</td>
+                    @elseif($block == 2)
+                        <td>B блок</td>
+                    @elseif($block ==3)
+                        <td>C блок</td>
+                    @endif
                 </tr>
             </table>
             <div class="image-map-container">
 
                 <svg xmlns="http://www.w3.org/2000/svg" version="1.1"  >
                     <defs>
-                        <clipPath id=A1>
-                            <polygon points="257 485,249 492,224 479,218 485,138 438,116 425,45 331,26 321,51 296,60 300,71 291,68 286,96 259,94 253,129 217,151 226,154 233,180 246,183 243,230 265,226 272,228 276,231 275,243 280,246 278,259 283,264 281,307 301,293 321,304 392,306 407,303 421,294 439,274 470,265 482"></polygon>
+                        <clipPath id=F1>
+                            <polygon points="217 83,602 85,602 120,217 118"></polygon>
                         </clipPath>
-                        <clipPath id=B1>
-                            <polygon points="307 301,265 281,260 283,256 276,230 154,218 140,250 124,250 115,282 101,296 114,312 107,311 103,317 99,309 89,337 75,342 82,368 69,383 83,383 93,387 98,392 96,409 110,413 108,443 134,432 142,417 262,385 282,390 287,388 299,392 306,379 312,370 306,358 313,350 303,305 327,296 320,295 318"></polygon>
+                        <clipPath id=F2>
+                            <polygon points="217 118,602 119,603 154,217 153"></polygon>
                         </clipPath>
-                        <clipPath id=A2>
-                            <polygon points="433 125,435 116,439 112,429 102,462 84,466 88,486 77,491 79,496 76,498 66,517 57,538 72,546 68,571 85,558 94,564 98,562 104,575 112,595 102,624 122,620 130,651 153,634 165,574 284,515 323,471 289,463 291,453 285,445 290,433 280,437 271,438 262,443 259,421 241"></polygon>
+                        <clipPath id=F3>
+                            <polygon points="217 154,603 155,604 187,217 188"></polygon>
+                        </clipPath>
+                        <clipPath id=F4>
+                            <polygon points="218 189,603 188,603 223,217 222"></polygon>
+                        </clipPath>
+                        <clipPath id=F5>
+                            <polygon points="217 223,604 224,605 258,217 257"></polygon>
+                        </clipPath>
+                        <clipPath id=F6>
+                            <polygon points="217 258,605 257,604 292,218 291"></polygon>
+                        </clipPath>
+                        <clipPath id=F7>
+                            <polygon points="217 291,603 293,604 324,217 324"></polygon>
+                        </clipPath>
+                        <clipPath id=F8>
+                            <polygon points="219 324,603 323,604 360,219 359"></polygon>
+                        </clipPath>
+                        <clipPath id=F9>
+                            <polygon points="219 359,604 361,604 394,219 394"></polygon>
+                        </clipPath>
+                        <clipPath id=F10>
+                            <polygon points="220 394,604 395,604 428,219 427"></polygon>
+                        </clipPath>
+                        <clipPath id=F11>
+                            <polygon points="220 428,604 428,603 465,220 462"></polygon>
+                        </clipPath>
+                        <clipPath id=F12>
+                            <polygon points="220 463,604 464,604 499,221 496"></polygon>
                         </clipPath>
                     </defs>
                 </svg>
 
                 <figure id=figura>
                     <map name=recortes id=recortes>
-                        <area onmouseover="hoverText('C блок 2020 оны 2р улирал')" shape=poly data-toggle="tooltip" title="Дараад блокоо сонгоно уу"
-                              coords="257,485,249,492,224,479,218,485,138,438,116,425,45,331,26,321,51,296,60,300,71,291,68,286,96,259,94,253,129,217,151,226,154,233,180,246,183,243,230,265,226,272,228,276,231,275,243,280,246,278,259,283,264,281,307,301,293,321,304,392,306,407,303,421,294,439,274,470,265,482" target="_blank"
-                              href="{{route('block_c')}}" >
-                        <area onmouseover="hoverText('A блок 2019 оны 3р улирал')" shape=poly data-toggle="tooltip" title="Дараад блокоо сонгоно уу"
-                              coords="307,301,265,281,260,283,256,276,230,154,218,140,250,124,250,115,282,101,296,114,312,107,311,103,317,99,309,89,337,75,342,82,368,69,383,83,383,93,387,98,392,96,409,110,413,108,443,134,432,142,417,262,385,282,390,287,388,299,392,306,379,312,370,306,358,313,350,303,305,327,296,320,295,318"
+                        <area onmouseover="hoverText('12-р давхар')" shape=poly data-toggle="tooltip" title="Дараад давхараа сонгоно уу"
+                              coords="217,83,602,85,602,120,217,118"
                               href="{{route('block_a')}}" >
-                        <area onmouseover="hoverText('B блок 2019 оны 3р улирал')" shape=poly data-toggle="tooltip" title="Дараад блокоо сонгоно уу"
-                              coords="433,125,435,116,439,112,429,102,462,84,466,88,486,77,491,79,496,76,498,66,517,57,538,72,546,68,571,85,558,94,564,98,562,104,575,112,595,102,624,122,620,130,651,153,634,165,574,284,515,323,471,289,463,291,453,285,445,290,433,280,437,271,438,262,443,259,421,241"
-                              href="{{route('block_b')}}" >
+                        <area onmouseover="hoverText('11-р давхар')" shape=poly data-toggle="tooltip" title="Дараад давхараа сонгоно уу"
+                              coords="217,118,602,119,603,154,217,153"
+                              href="{{route('block_a')}}" >
+                        <area onmouseover="hoverText('10-р давхар')" shape=poly data-toggle="tooltip" title="Дараад давхараа сонгоно уу"
+                              coords="217,154,603,155,604,187,217,188"
+                              href="{{route('block_a')}}" >
+                        <area onmouseover="hoverText('9-р давхар')" shape=poly data-toggle="tooltip" title="Дараад давхараа сонгоно уу"
+                              coords="218,189,603,188,603,223,217,222"
+                              href="{{route('block_a')}}" >
+                        <area onmouseover="hoverText('8-р давхар')" shape=poly data-toggle="tooltip" title="Дараад давхараа сонгоно уу"
+                              coords="217,223,604,224,605,258,217,257"
+                              href="{{route('block_a')}}" >
+                        <area onmouseover="hoverText('7-р давхар')" shape=poly data-toggle="tooltip" title="Дараад давхараа сонгоно уу"
+                              coords="217,258,605,257,604,292,218,291"
+                              href="{{route('block_a')}}" >
+                        <area onmouseover="hoverText('6-р давхар')" shape=poly data-toggle="tooltip" title="Дараад давхараа сонгоно уу"
+                              coords="217,291,603,293,604,324,217,324"
+                              href="{{route('block_a')}}" >
+                        <area onmouseover="hoverText('5-р давхар')" shape=poly data-toggle="tooltip" title="Дараад давхараа сонгоно уу"
+                              coords="219,324,603,323,604,360,219,359"
+                              href="{{route('block_a')}}" >
+                        <area onmouseover="hoverText('4-р давхар')" shape=poly data-toggle="tooltip" title="Дараад давхараа сонгоно уу"
+                              coords="219,359,604,361,604,394,219,394"
+                              href="{{route('block_a')}}" >
+                        <area onmouseover="hoverText('3-р давхар')" shape=poly data-toggle="tooltip" title="Дараад давхараа сонгоно уу"
+                              coords="220,394,604,395,604,428,219,427"
+                              href="{{route('block_a')}}" >
+                        <area onmouseover="hoverText('2-р давхар')" shape=poly data-toggle="tooltip" title="Дараад давхараа сонгоно уу"
+                              coords="220,428,604,428,603,465,220,462"
+                              href="{{route('block_a')}}" >
+                        <area onmouseover="hoverText('1-р давхар')" shape=poly data-toggle="tooltip" title="Дараад давхараа сонгоно уу"
+                              coords="220,463,604,464,604,499,221,496"
+                              href="{{route('block_a')}}" >
 
-                        <img id=capaRecorte src="{{asset('front/assets/images/pyramid_min.jpg')}}" >
+                        <img id=capaRecorte src="{{asset('front/assets/images/floor.jpg')}}" >
                     </map>
 
                     <img src="https://lh3.googleusercontent.com/-HqFCpcmlv1U/VjZqE6e7u0I/AAAAAAAAGao/hIQohrsu0xI/s800-Ic42/transparente.gif"
