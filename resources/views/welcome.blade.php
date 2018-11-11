@@ -362,7 +362,7 @@
         </div><!-- row -->
         <div class="row ">
             <div class="col-md-12 text-center">
-                <a class="btn btn-white btn-outline waves waves-dark" href="bair.html">Цааш үзэх ...</a>
+                <a class="btn btn-white btn-outline waves waves-dark" href="{{route('models')}}">Цааш үзэх ...</a>
 
             </div>
 

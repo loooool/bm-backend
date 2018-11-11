@@ -142,7 +142,7 @@
 
 
         <h6>PYRAMID APARTMENT</h6>
-        <h3 id="blocka">ДАВХАР СОНГОХ</h3>
+        <h3 id="blocka">@if(session('not_empty')){{session('not_empty')}}@elseДАВХАР СОНГОХ@endif</h3>
         <br>
 
 
@@ -210,41 +210,42 @@
                 <figure id=figura>
                     <map name=recortes id=recortes>
                         <area onmouseover="hoverText('12-р давхар')" shape=poly data-toggle="tooltip" title="Дараад давхараа сонгоно уу"
-                              coords="217,83,602,85,602,120,217,118"
-                              href="{{route('block_a')}}" >
+                              @if($design->id == 1 or $design->id == 2 or $design->id == 9 ) @else coords="217,83,602,85,602,120,217,118"
+                              href="{{url('/floor/12')}}" @endif>
                         <area onmouseover="hoverText('11-р давхар')" shape=poly data-toggle="tooltip" title="Дараад давхараа сонгоно уу"
-                              coords="217,118,602,119,603,154,217,153"
-                              href="{{route('block_a')}}" >
+                              @if($design->id == 1 or $design->id == 2 or $design->id == 9 ) @else coords="217,118,602,119,603,154,217,153"
+                              href="{{url('/floor/11')}}" @endif>
                         <area onmouseover="hoverText('10-р давхар')" shape=poly data-toggle="tooltip" title="Дараад давхараа сонгоно уу"
-                              coords="217,154,603,155,604,187,217,188"
-                              href="{{route('block_a')}}" >
+                              @if($design->id == 1 or $design->id == 2 or $design->id == 9 ) @else coords="217,154,603,155,604,187,217,188"
+                              href="{{url('/floor/10')}}" @endif>
                         <area onmouseover="hoverText('9-р давхар')" shape=poly data-toggle="tooltip" title="Дараад давхараа сонгоно уу"
-                              coords="218,189,603,188,603,223,217,222"
-                              href="{{route('block_a')}}" >
+                              @if($design->id == 1 or $design->id == 2 or $design->id == 9 ) @else coords="218,189,603,188,603,223,217,222"
+                              href="{{url('/floor/9')}}" @endif>
                         <area onmouseover="hoverText('8-р давхар')" shape=poly data-toggle="tooltip" title="Дараад давхараа сонгоно уу"
-                              coords="217,223,604,224,605,258,217,257"
-                              href="{{route('block_a')}}" >
+                              @if($design->id == 1 or $design->id == 2 or $design->id == 9 ) @else coords="217,223,604,224,605,258,217,257"
+                              href="{{url('/floor/8')}}" @endif>
                         <area onmouseover="hoverText('7-р давхар')" shape=poly data-toggle="tooltip" title="Дараад давхараа сонгоно уу"
-                              coords="217,258,605,257,604,292,218,291"
-                              href="{{route('block_a')}}" >
+                              @if($design->id == 1 or $design->id == 2 or $design->id == 9 ) @else coords="217,258,605,257,604,292,218,291"
+                              href="{{url('/floor/7')}}" @endif >
                         <area onmouseover="hoverText('6-р давхар')" shape=poly data-toggle="tooltip" title="Дараад давхараа сонгоно уу"
-                              coords="217,291,603,293,604,324,217,324"
-                              href="{{route('block_a')}}" >
+                              @if($design->id == 1 or $design->id == 2 or $design->id == 9 ) @else coords="217,291,603,293,604,324,217,324"
+                              href="{{url('/floor/6')}}" @endif>
                         <area onmouseover="hoverText('5-р давхар')" shape=poly data-toggle="tooltip" title="Дараад давхараа сонгоно уу"
-                              coords="219,324,603,323,604,360,219,359"
-                              href="{{route('block_a')}}" >
+                              @if($design->id == 1 or $design->id == 2 or $design->id == 9 ) @else coords="219,324,603,323,604,360,219,359"
+                              href="{{url('/floor/5')}}" @endif>
                         <area onmouseover="hoverText('4-р давхар')" shape=poly data-toggle="tooltip" title="Дараад давхараа сонгоно уу"
-                              coords="219,359,604,361,604,394,219,394"
-                              href="{{route('block_a')}}" >
+                              @if($design->id == 1 or $design->id == 2 or $design->id == 9 ) @else coords="219,359,604,361,604,394,219,394"
+                              href="{{url('/floor/4')}}" @endif>
                         <area onmouseover="hoverText('3-р давхар')" shape=poly data-toggle="tooltip" title="Дараад давхараа сонгоно уу"
-                              coords="220,394,604,395,604,428,219,427"
-                              href="{{route('block_a')}}" >
+                              @if($design->id == 10 or $design->id == 11 ) @else coords="220,394,604,395,604,428,219,427"
+                              href="{{url('/floor/3')}}" @endif >
                         <area onmouseover="hoverText('2-р давхар')" shape=poly data-toggle="tooltip" title="Дараад давхараа сонгоно уу"
-                              coords="220,428,604,428,603,465,220,462"
-                              href="{{route('block_a')}}" >
+                              @if($design->id == 10 or $design->id == 11 ) @else coords="220,428,604,428,603,465,220,462"
+                              href="{{url('/floor/2')}}" @endif>
                         <area onmouseover="hoverText('1-р давхар')" shape=poly data-toggle="tooltip" title="Дараад давхараа сонгоно уу"
+                              @if($design->id == 10 or $design->id == 11 ) @else
                               coords="220,463,604,464,604,499,221,496"
-                              href="{{route('block_a')}}" >
+                              href="{{url('/floor/1')}}" @endif >
 
                         <img id=capaRecorte src="{{asset('front/assets/images/floor.jpg')}}" >
                     </map>
