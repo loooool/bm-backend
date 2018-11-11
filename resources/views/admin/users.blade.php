@@ -29,11 +29,15 @@
                     @foreach($members as $member)
 
                         <tr>
-                            <td>{{$member->name}}</td>
+                            <td><a href="{{url('/home/user_check').'/'.$member->id}}">{{$member->name}}</a></td>
                             <td>{{$member->last_name}}</td>
                             <td>{{$member->phone_number}}</td>
                             <td>{{$member->register_number}}</td>
-                            <td>{{$member->country}}</td>
+                            @if($member->country == "mn")
+                                <td>Mongolia</td>
+                            @else
+                                <td>{{$member->country}}</td>
+                            @endif
                             <td>{{$member->email}}</td>
                         </tr>
                     @endforeach

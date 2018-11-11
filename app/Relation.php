@@ -9,6 +9,7 @@ class Relation extends Model
     protected $fillable = ['user_id',
         'model_id','floor_id', 'block_id','state'];
     public function user(){
-        return $this->belongsTo('App\User');
+        return $this->hasOne('App\User','id','user_id');
     }
+
 }

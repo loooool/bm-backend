@@ -15,6 +15,10 @@
                                 class=" ti-calendar"></i><span> Хэрэглэгчид</span></a>
                 </li>
 
+                <li>
+                    <a href="{{route('contract_request')}}" class="waves-effect waves-primary"><i
+                                class=" ti-calendar"></i><span> Гэрээний хүсэлтүүд</span></a>
+                </li>
 
 
 

@@ -30,6 +30,9 @@ Route::post('god', [
     'as' => '',
     'uses' => 'Auth\LoginController@login'
 ]);
+
+Route::get('home/user_check/{id}','AdminUserCheckController@index')->name('god_users_id');
+
 Route::get('byegod', [
     'as' => 'logout',
     'uses' => 'Auth\LoginController@logout'
@@ -45,6 +48,10 @@ Route::post('register', [
 ]);
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home/users', 'AdminUserController@index')->name('usr');
+Route::get('/home/user_check', 'AdminUserCheckController@index')->name('user_check');
+Route::get('/home/contract_request', 'ContractRequestController@index')->name('contract_request');
+
 
 Route::get('verify', 'VerifyController@index')->name('verify');
 Route::post('verify', 'VerifyController@store')->name('verify');
@@ -108,6 +115,3 @@ Route::get('/block/c', function () {
 Route::get('/floor', function () {
     return view('floor');
 })->name('floor');
-//Route::get('/contract', function (){
-//
-//});

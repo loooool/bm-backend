@@ -25,6 +25,9 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+    public function order(){
+        return $this->hasOne('App\Relation','user_id','id');
+    }
 
 
 }

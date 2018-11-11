@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Counter;
+use App\Relation;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -29,6 +30,10 @@ class HomeController extends Controller
     {
         $user = Auth::user();
         $counter = Counter::find(1);
-        return view('home', compact('user','counter'));
+        $superuser = Relation::all();
+        $user1 = $superuser->where('state', '1');
+        $user2 = $superuser->where('state','2');
+        $user3 = $superuser->where('state','3');
+        return view('home', compact('user','counter','superuser','user1','user2','user3'));
     }
 }
