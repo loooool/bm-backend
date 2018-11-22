@@ -205,10 +205,10 @@
             <div class="image-box wow fadeInUp">
 
                 <div class="image-box-thumbnail">
-                    <a href="b.html"><img src="{{asset('front/assets/images/69.73.jpg')}}" alt=""></a>
+                    <a href="{{route('b')}}"><img src="{{asset('front/assets/images/69.73.jpg')}}" alt=""></a>
                 </div><!-- image-box-thumbnail -->
 
-                <h5><a href="b.html">B загвар</a></h5>
+                <h5><a href="{{route('b')}}">B загвар</a></h5>
 
                 <div class="row">
                     <div class="col-md-6 text-center">69.73<br>мкв</div>
@@ -223,10 +223,10 @@
             <div class="image-box wow fadeInUp">
 
                 <div class="image-box-thumbnail">
-                    <a href="c.html"><img src="{{asset('front/assets/images/51.47.jpg')}}" alt=""></a>
+                    <a href="{{route('c')}}"><img src="{{asset('front/assets/images/51.47.jpg')}}" alt=""></a>
                 </div><!-- image-box-thumbnail -->
 
-                <h5><a href="c.html">C загвар</a></h5>
+                <h5><a href="{{route('c')}}">C загвар</a></h5>
 
                 <div class="row">
                     <div class="col-md-6 text-center">51.47<br>мкв</div>
@@ -241,10 +241,10 @@
             <div class="image-box wow fadeInUp">
 
                 <div class="image-box-thumbnail">
-                    <a href="d.html"><img src="{{asset('front/assets/images/54.12.jpg')}}" alt=""></a>
+                    <a href="{{route('d')}}"><img src="{{asset('front/assets/images/54.12.jpg')}}" alt=""></a>
                 </div><!-- image-box-thumbnail -->
 
-                <h5><a href="d.html">D загвар</a></h5>
+                <h5><a href="{{route('d')}}">D загвар</a></h5>
 
                 <div class="row">
                     <div class="col-md-6 text-center">54.12<br>мкв</div>

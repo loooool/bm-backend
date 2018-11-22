@@ -61,5 +61,8 @@ class Kernel extends HttpKernel
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verification' => \App\Http\Middleware\Verification::class,
         'Administrator' => \App\Http\Middleware\Administrator::class,
+        'AuthCheck' => \App\Http\Middleware\UserRedirectIfAuth::class,
+        'user.verification' => \App\Http\Middleware\UserCheck::class,
+        'Twilio' => Aloha\Twilio\Support\Laravel\Facade::class,
     ];
 }

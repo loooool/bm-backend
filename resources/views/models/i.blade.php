@@ -23,7 +23,7 @@
         <div class="col-md-12">
             <div class="headline text-center no-maigin-bottom">
                 <h6 class=".lead">PYRAMID APARTMENT</h6>
-                <h2><b>E</b> <span class="font-weight-light te font">3AГBAP</span></h2>
+                <h2><b>I</b> <span class="font-weight-light te font">3AГBAP</span></h2>
             </div>
         </div>
     </div>
@@ -58,36 +58,19 @@
             <div class="text-box" style="border-radius: 15px">
                 <div class="row">
                     <div class="col-md-6">
-                        <h4>4 өрөө</h4>
+                        <h4>2 өрөө</h4>
                     </div>
                     <div class="col-md-6">
-                        <h4>81.75мкв</h4>
+                        <h4>54.98мкв</h4>
                     </div>
                 </div>
 
-                <div class="row">
-                    <div class="col-md-6">
-                        <p><b>Мастер ариун цэврийн өрөө</b></p>
-                    </div>
-                    <div class="col-md-6">
-                        <p>3.97мкв</p>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-6">
-                        <p><b>Мастер унтлагын өрөө</b></p>
-                    </div>
-                    <div class="col-md-6">
-                        <p>16.44мкв</p>
-                    </div>
-                </div>
                 <div class="row">
                     <div class="col-md-6">
                         <p><b>Унтлагын өрөө</b></p>
                     </div>
                     <div class="col-md-6">
-                        <p>14.2мкв</p>
+                        <p>15.48мкв</p>
                     </div>
                 </div>
 
@@ -96,38 +79,30 @@
                         <p><b>Зочны өрөө</b></p>
                     </div>
                     <div class="col-md-6">
-                        <p>29.13мкв</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <p><b>Хүүхдийн өрөө</b></p>
-                    </div>
-                    <div class="col-md-6">
-                        <p>11.03мкв</p>
+                        <p>32.85мкв</p>
                     </div>
                 </div>
 
-
                 <div class="row">
                     <div class="col-md-6">
-                        <p><b>Aриун цэврийн өрөө</b></p>
+                        <p><b>Ариун цэврийн өрөө</b></p>
                     </div>
                     <div class="col-md-6">
-                        <p>4.16мкв</p>
+                        <p>4.78мкв</p>
                     </div>
                 </div>
+
                 <div class="row">
                     <div class="col-md-6">
                         <p><b>Тагт</b></p>
                     </div>
                     <div class="col-md-6">
-                        <p>2.12мкв</p>
+                        <p>1.84мкв</p>
                     </div>
                 </div>
             </div>
             <!--            row-n div-->
-            <a href="{{url("/models/choose/e")}}">
+            <a href="{{url("/models/choose/i")}}">
                 <button class="btn btn-block btn-black" >Онлайн захиалга өгөх<br>1,950,000₮/мкв</button>
             </a>
             <img src="{{asset('front/assets/images/4-12.jpg')}}">
@@ -194,10 +169,7 @@
     </div>
 
     <!-- end slider-->
-    <!--div row-->
-    <br>
 
-    <!--    zahialah-->
 
     <section class="full-section dark-section" style="margin-bottom: 0px">
 
@@ -228,17 +200,19 @@
             <h3><span class="font-weight-light te font">БУСАД 3AГBAPУУД</span></h3>
         </div>
         <div class="row">
+
+
             <div class="col-md-4">
                 <div class="image-box wow fadeInUp">
 
                     <div class="image-box-thumbnail">
-                        <a href="d.html"><img src="{{asset('front/assets/images/54.12.jpg')}}" alt=""></a>
+                        <a href="J.html"><img src="{{asset('front/assets/images/67.24.jpg')}}" alt=""></a>
                     </div><!-- image-box-thumbnail -->
 
-                    <h5><a href="d.html">D загвар</a></h5>
+                    <h5><a href="J.html">j загвар</a></h5>
 
                     <div class="row">
-                        <div class="col-md-6 text-center">54.12<br>мкв</div>
+                        <div class="col-md-6 text-center">67.24<br>мкв</div>
                         <div class="col-md-6 text-center">2 <br>өрөө</div>
                     </div>
 
@@ -250,13 +224,13 @@
                 <div class="image-box wow fadeInUp">
 
                     <div class="image-box-thumbnail">
-                        <a href="f.html"><img src="{{asset('front/assets/images/62.37.jpg')}}" alt=""></a>
+                        <a href="h.html"><img src="{{asset('front/assets/images/87.77.jpg')}}" alt=""></a>
                     </div><!-- image-box-thumbnail -->
 
-                    <h5><a href="f.html">F загвар</a></h5>
+                    <h5><a href="h.html">K загвар</a></h5>
 
                     <div class="row">
-                        <div class="col-md-6 text-center">62.37<br>мкв</div>
+                        <div class="col-md-6 text-center">87.77<br>мкв</div>
                         <div class="col-md-6 text-center">3 <br>өрөө</div>
                     </div>
 
@@ -268,13 +242,13 @@
                 <div class="image-box wow fadeInUp">
 
                     <div class="image-box-thumbnail">
-                        <a href="g.html"><img src="{{asset('front/assets/images/52.98.jpg')}}" alt=""></a>
+                        <a href="a.html"><img src="{{asset('front/assets/images/54.95.jpg')}}" alt=""></a>
                     </div><!-- image-box-thumbnail -->
 
-                    <h5><a href="g.html">G загвар</a></h5>
+                    <h5><a href="a.html">A загвар</a></h5>
 
                     <div class="row">
-                        <div class="col-md-6 text-center">52.98<br>мкв</div>
+                        <div class="col-md-6 text-center">37.85<br>мкв</div>
                         <div class="col-md-6 text-center">2 <br>өрөө</div>
                     </div>
 
@@ -285,5 +259,4 @@
         </div>
     </div>
     <!--        zagvaruud-->
-
 @endsection

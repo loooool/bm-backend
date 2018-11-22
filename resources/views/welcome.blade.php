@@ -9,11 +9,10 @@
                 <a href="{{route('models')}}">Байрны сонголтууд</a>
             </li>
             <li class="dropdown">
-                <a class="waves" href="talbai.html">Үйлчилгээний талбай</a>
+                <a class="waves" href="talbai.html">Нийтлэлүүд</a>
             </li>
             <li class="megamenu">
-                <a href="aboutus.html">Гүйцэтгэгч</a>
-
+                <a href="aboutus.html">Нэвтрэх</a>
             </li>
     @endsection
 @section('content')
@@ -308,10 +307,10 @@
                 <div class="image-box wow fadeInUp">
 
                     <div class="image-box-thumbnail">
-                        <a href="a.html"><img src="{{asset('front/assets/images/37.jpg')}}" alt=""></a>
+                        <a href="{{route('a')}}"><img src="{{asset('front/assets/images/37.jpg')}}" alt=""></a>
                     </div><!-- image-box-thumbnail -->
 
-                    <h5><a href="a.html">A загвар</a></h5>
+                    <h5><a href="{{route('a')}}">A загвар</a></h5>
 
                     <div class="row">
                         <div class="col-md-6 text-center">37.85<br>мкв</div>
@@ -327,10 +326,10 @@
                 <div class="image-box wow fadeInUp">
 
                     <div class="image-box-thumbnail">
-                        <a href="b.html"><img src="{{asset('front/assets/images/69.73.jpg')}}" alt=""></a>
+                        <a href="{{route('b')}}"><img src="{{asset('front/assets/images/69.73.jpg')}}" alt=""></a>
                     </div><!-- image-box-thumbnail -->
 
-                    <h5><a href="b.html">B загвар</a></h5>
+                    <h5><a href="{{route('b')}}">B загвар</a></h5>
 
                     <div class="row">
                         <div class="col-md-6 text-center">69.73<br>мкв</div>
@@ -345,10 +344,10 @@
                 <div class="image-box wow fadeInUp">
 
                     <div class="image-box-thumbnail">
-                        <a href="c.html"><img src="{{asset('front/assets/images/51.47.jpg')}}" alt=""></a>
+                        <a href="{{route('c')}}"><img src="{{asset('front/assets/images/51.47.jpg')}}" alt=""></a>
                     </div><!-- image-box-thumbnail -->
 
-                    <h5><a href="c.html">C загвар</a></h5>
+                    <h5><a href="{{route('c')}}">C загвар</a></h5>
 
                     <div class="row">
                         <div class="col-md-6 text-center">51.47<br>мкв</div>
@@ -385,14 +384,13 @@
 
                 </div><!-- headline -->
                 <div class="embed-responsive embed-responsive-16by9">
-                    <div class="sketchfab-embed-wrapper"><iframe width="640" height="480" src="https://sketchfab.com/models/e9f7bf5185bc4f54aee3a2c345bd6f62/embed" frameborder="0" allow="autoplay; fullscreen; vr" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+                    <div class="sketchfab-embed-wrapper"><iframe width="100%" height="480" src="https://sketchfab.com/models/dfeff447df7345a3a285f90e7ce37ee4/embed?preload=1" frameborder="0" allow="autoplay; fullscreen; vr" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 
                         <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;">
-                            <a href="https://sketchfab.com/models/e9f7bf5185bc4f54aee3a2c345bd6f62?utm_medium=embed&utm_source=website&utm_campaign=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">Apartment Building 17</a>
+                            <a href="https://sketchfab.com/models/dfeff447df7345a3a285f90e7ce37ee4?utm_medium=embed&utm_source=website&utm_campaign=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">Pyramid</a>
                             by <a href="https://sketchfab.com/tselmeg?utm_medium=embed&utm_source=website&utm_campaign=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">tselmeg</a>
                             on <a href="https://sketchfab.com?utm_medium=embed&utm_source=website&utm_campaign=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a>
                         </p>
-
                     </div>
                 </div><!-- embed-responsive -->
                 <p class="text-center">

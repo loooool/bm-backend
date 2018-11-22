@@ -110,7 +110,10 @@
                 </div>
             </div>
             <!--            row-n div-->
-            <img src="assets/images/4-12.jpg">
+            <a href="{{url("/models/choose/d")}}">
+                <button class="btn btn-block btn-black" >Онлайн захиалга өгөх<br>1,950,000₮/мкв</button>
+            </a>
+            <img src="{{asset('front/assets/images/4-12.jpg')}}">
         </div>
         <!--        col div-->
 
@@ -136,34 +139,34 @@
 
                 <div class="owl-carousel images-slider">
                     <div class="item">
-                        <img src="assets/images/interior1.jpg" alt="">
+                        <img src="{{asset('front/assets/images/interior1.jpg')}}" alt="">
                     </div><!-- item -->
                     <div class="item">
-                        <img src="assets/images/interior2.jpg" alt="">
+                        <img src="{{asset('front/assets/images/interior2.jpg')}}" alt="">
                     </div><!-- item -->
                     <div class="item">
-                        <img src="assets/images/interior3.jpg" alt="">
+                        <img src="{{asset('front/assets/images/interior3.jpg')}}" alt="">
                     </div><!-- item -->
                     <div class="item">
-                        <img src="assets/images/interior4.jpg" alt="">
+                        <img src="{{asset('front/assets/images/interior4.jpg')}}" alt="">
                     </div><!-- item -->
                     <div class="item">
-                        <img src="assets/images/interior7.jpg" alt="">
+                        <img src="{{asset('front/assets/images/interior7.jpg')}}" alt="">
                     </div><!-- item -->
                     <div class="item">
-                        <img src="assets/images/interior10.jpg" alt="">
+                        <img src="{{asset('front/assets/images/interior10.jpg')}}" alt="">
                     </div><!-- item -->
                     <div class="item">
-                        <img src="assets/images/interior11.jpg" alt="">
+                        <img src="{{asset('front/assets/images/interior11.jpg')}}" alt="">
                     </div><!-- item -->
                     <div class="item">
-                        <img src="assets/images/interior12.jpg" alt="">
+                        <img src="{{asset('front/assets/images/interior12.jpg')}}" alt="">
                     </div><!-- item -->
                     <div class="item">
-                        <img src="assets/images/interior13.jpg" alt="">
+                        <img src="{{asset('front/assets/images/interior13.jpg')}}" alt="">
                     </div><!-- item -->
                     <div class="item">
-                        <img src="assets/images/interior14.jpg" alt="">
+                        <img src="{{asset('front/assets/images/interior14.jpg')}}" alt="">
                     </div><!-- item -->
 
                 </div><!-- images-slider -->
@@ -208,7 +211,7 @@
                 <div class="image-box wow fadeInUp">
 
                     <div class="image-box-thumbnail">
-                        <a href="c.html"><img src="assets/images/51.47.jpg" alt=""></a>
+                        <a href="c.html"><img src="{{asset('front/assets/images/51.47.jpg')}}" alt=""></a>
                     </div><!-- image-box-thumbnail -->
 
                     <h5><a href="c.html">C загвар</a></h5>
@@ -226,7 +229,7 @@
                 <div class="image-box wow fadeInUp">
 
                     <div class="image-box-thumbnail">
-                        <a href="e.html"><img src="assets/images/81.75.jpg" alt=""></a>
+                        <a href="e.html"><img src="{{asset('front/assets/images/81.75.jpg')}}" alt=""></a>
                     </div><!-- image-box-thumbnail -->
 
                     <h5><a href="e.html">E загвар</a></h5>
@@ -243,7 +246,7 @@
                 <div class="image-box wow fadeInUp">
 
                     <div class="image-box-thumbnail">
-                        <a href="f.html"><img src="assets/images/62.37.jpg" alt=""></a>
+                        <a href="f.html"><img src="{{asset('front/assets/images/62.37.jpg')}}" alt=""></a>
                     </div><!-- image-box-thumbnail -->
 
                     <h5><a href="f.html">F загвар</a></h5>

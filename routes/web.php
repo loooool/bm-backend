@@ -20,8 +20,11 @@ Route::get('/', function () {
     $counter->views = $counter->views + 1;
     $counter->save();
     return view('welcome');
+
 })->name('welcome');
 
+
+//-----ADMIN SECTION
 Route::get('god', [
     'as' => 'login',
     'uses' => 'Auth\LoginController@showLoginForm'
@@ -55,6 +58,9 @@ Route::get('/home/contract_request', 'ContractRequestController@index')->name('c
 
 Route::get('verify', 'VerifyController@index')->name('verify');
 Route::post('verify', 'VerifyController@store')->name('verify');
+
+
+
 
 
 //------MODELS------
@@ -154,16 +160,6 @@ Route::get('/models/choose/k', function () {
 
 
 
-
-Route::get('/reg', function () {
-    return view('register');
-})->name('reg');
-
-
-
-
-
-
 //------BLOCKS------
 Route::get('/block', function () {
     if (session('design')) {
@@ -199,11 +195,6 @@ Route::get('/block/c', function () {
 
 
 
-
-
-
-
-
 //------FLOORS------
 Route::get('/floor', function () {
     if (empty(session('design')) && empty(session('block'))) {
@@ -222,8 +213,26 @@ Route::get('/floor/{id}', function($id) {
         if (empty(\App\Relation::all()->where('block_id', session('block'))->
         where('model_id', session('design'))->where('floor_id', $id)->
         whereIn('state', [1, 2, 3])->first())) {
-            session()->put('floor', $id);
-            return redirect(route('reg'));
+            if (session('design') == 1 or session('design') == 2 or session('design') == 9) {
+                if ($id < 4) {
+                    session()->put('floor', $id);
+                    return redirect(route('reg'));
+                } else {
+                    //uuuuuuuuuuuuuuuuuuuuuuuuuu
+                }
+
+            } elseif(session('design') == 11 or session('design') == 10) {
+                if ($id > 3) {
+                    session()->put('floor', $id);
+                    return redirect(route('reg'));
+                } else {
+                    //uuuuuuuuuuuuuuuuuuuuuuuuuu
+                }
+            } else {
+                session()->put('floor', $id);
+                return redirect(route('reg'));
+            }
+
         } else {
             session()->flash('not_empty', 'Уучлаарай захиалцан байна');
             return redirect(route('floor'));
@@ -234,3 +243,21 @@ Route::get('/floor/{id}', function($id) {
     }
 });
 //-------FLOOR END
+
+
+
+//--------Register------------
+Route::get('/reg', 'UserRegisterController@index')->middleware('AuthCheck')->name('reg');
+Route::post('/reg', 'UserRegisterController@store')->middleware('AuthCheck')->name('reg');
+Route::post('/log', 'UserRegisterController@authenticate')->middleware('AuthCheck')->name('log');
+Route::get('/logout', 'Auth\LoginController@logout');
+Route::get('/verification', 'UserRegisterController@verification');
+Route::post('/verification', 'UserRegisterController@verify')->name('verification');
+
+
+//---------CONTRACT--------
+Route::get('/contract', 'ContractController@index')->name('contract');
+Route::post('/contract', 'ContractController@store')->name('contract');
+
+//---------FINAL-----------
+Route::get('final', 'ContractController@final')->name('final');
