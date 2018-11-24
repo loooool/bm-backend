@@ -22,6 +22,6 @@ class UserCheck
             } elseif (Auth::user()->verified == 1)
                 return $next($request);
         }
-        return redirect('welcome');
+        return redirect('/');
     }
 }

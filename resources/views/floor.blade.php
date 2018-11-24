@@ -244,7 +244,7 @@
                               @if(empty($relation->where('floor_id', 11)->first()))
                               onmouseover="hoverText('11-р давхар')"
                               coords="217,118,602,119,603,154,217,153"
-                              href="{{url('/floor/11')}}"
+                              href="{{url('/models/'.$design->id.'/block/'.$block.'/floor/11')}}"
                               @else
                               onmouseover="hoverText('Уучлаарай захиалгатай байр байна')"
                               coords="217,118,602,119,603,154,217,153"
@@ -258,7 +258,7 @@
                               @if(empty($relation->where('floor_id', 10)->first()))
                               onmouseover="hoverText('10-р давхар')"
                               coords="217,154,603,155,604,187,217,188"
-                              href="{{url('/floor/10')}}"
+                              href="{{url('/models/'.$design->id.'/block/'.$block.'/floor/10')}}"
                               @else
                               onmouseover="hoverText('Уучлаарай захиалгатай байр байна')"
                               coords="217,154,603,155,604,187,217,188"
@@ -271,7 +271,7 @@
                               @if(empty($relation->where('floor_id', 9)->first()))
                               onmouseover="hoverText('9-р давхар')"
                               coords="218,189,603,188,603,223,217,222"
-                              href="{{url('/floor/9')}}"
+                              href="{{url('/models/'.$design->id.'/block/'.$block.'/floor/9')}}"
                               @else
                               onmouseover="hoverText('Уучлаарай захиалгатай байр байна')"
                               coords="218,189,603,188,603,223,217,222"
@@ -284,7 +284,7 @@
                               @if(empty($relation->where('floor_id', 8)->first()))
                               onmouseover="hoverText('8-р давхар')"
                               coords="217,223,604,224,605,258,217,257"
-                              href="{{url('/floor/8')}}"
+                              href="{{url('/models/'.$design->id.'/block/'.$block.'/floor/8')}}"
                               @else
                               onmouseover="hoverText('Уучлаарай захиалгатай байр байна')"
                               coords="217,223,604,224,605,258,217,257"
@@ -297,7 +297,7 @@
                               @if(empty($relation->where('floor_id', 7)->first()))
                               onmouseover="hoverText('7-р давхар')"
                               coords="217,258,605,257,604,292,218,291"
-                              href="{{url('/floor/7')}}"
+                              href="{{url('/models/'.$design->id.'/block/'.$block.'/floor/7')}}"
                               @else
                               onmouseover="hoverText('Уучлаарай захиалгатай байр байна')"
                               coords="217,258,605,257,604,292,218,291"
@@ -309,7 +309,7 @@
                               @if(empty($relations->where('floor_id', 6)->first()))
                               onmouseover="hoverText('6-р давхар')"
                               coords="217,291,603,293,604,324,217,324"
-                              href="{{url('/floor/6')}}"
+                              href="{{url('/models/'.$design->id.'/block/'.$block.'/floor/6')}}"
                               @else
                               onmouseover="hoverText('Уучлаарай захиалгатай байр байна')"
                               coords="217,291,603,293,604,324,217,324"
@@ -321,7 +321,7 @@
                               @if(empty($relations->where('floor_id', 5)->first()))
                               onmouseover="hoverText('5-р давхар')"
                               coords="219,324,603,323,604,360,219,359"
-                              href="{{url('/floor/5')}}"
+                              href="{{url('/models/'.$design->id.'/block/'.$block.'/floor/5')}}"
                               @else
                               onmouseover="hoverText('Уучлаарай захиалгатай байр байна')"
                               coords="219,324,603,323,604,360,219,359"
@@ -333,11 +333,11 @@
                               @if(empty($relations->where('floor_id', 4)->first()))
                               onmouseover="hoverText('4-р давхар')"
                               coords="219,359,604,361,604,394,219,394"
-                              href="{{url('/floor/4')}}"
+                              href="{{url('/models/'.$design->id.'/block/'.$block.'/floor/4')}}"
                               @else
                               onmouseover="hoverText('Уучлаарай захиалгатай байр байна')"
                               coords="219,359,604,361,604,394,219,394"
-                              href="{{url('/floor/4')}}"
+                              href="{{url('/models/'.$design->id.'/block/'.$block.'/floor/4')}}"
                               @endif
                                 @endif>
                         <area shape=poly data-toggle="tooltip"
@@ -346,11 +346,11 @@
                               @if(empty($relations->where('floor_id', 3)->first()))
                               onmouseover="hoverText('3-р давхар')"
                               coords="220,394,604,395,604,428,219,427"
-                              href="{{url('/floor/3')}}"
+                              href="{{url('/models/'.$design->id.'/block/'.$block.'/floor/3')}}"
                               @else
                               onmouseover="hoverText('Уучлаарай захиалгатай байр байна')"
                               coords="220,394,604,395,604,428,219,427"
-                              href="{{url('/floor/3')}}"
+                              href="{{url('/models/'.$design->id.'/block/'.$block.'/floor/3')}}"
                               @endif
                                @endif >
                         <area shape=poly data-toggle="tooltip"
@@ -359,11 +359,11 @@
                               @if(empty($relations->where('floor_id', 2)->first()))
                               onmouseover="hoverText('2-р давхар')"
                               coords="220,428,604,428,603,465,220,462"
-                              href="{{url('/floor/2')}}"
+                              href="{{url('/models/'.$design->id.'/block/'.$block.'/floor/2')}}"
                               @else
                               onmouseover="hoverText('Уучлаарай захиалгатай байр байна')"
                               coords="220,428,604,428,603,465,220,462"
-                              href="{{url('/floor/2')}}"
+                              href="{{url('/models/'.$design->id.'/block/'.$block.'/floor/2')}}"
                               @endif
                                @endif>
                         <area shape=poly data-toggle="tooltip"
@@ -372,11 +372,11 @@
                               @if(empty($relations->where('floor_id', 1)->first()))
                               onmouseover="hoverText('1-р давхар')"
                               coords="220,463,604,464,604,499,221,496"
-                              href="{{url('/floor/1')}}"
+                              href="{{url('/models/'.$design->id.'/block/'.$block.'/floor/1')}}"
                               @else
                               onmouseover="hoverText('Уучлаарай захиалгатай байр байна')"
                               coords="220,463,604,464,604,499,221,496"
-                              href="{{url('/floor/1')}}"
+                              href="{{url('/models/'.$design->id.'/block/'.$block.'/floor/1')}}"
                                 @endif
                               @endif >
 

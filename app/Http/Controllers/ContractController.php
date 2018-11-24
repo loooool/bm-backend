@@ -17,19 +17,16 @@ class ContractController extends Controller
     }
 
     public function index($design, $block, $floor) {
-        $block = session('block');
-        $floor = session('floor');
-        $design = \App\Design::find(session('design'));
+        $design = \App\Design::find($design);
         return view('contract', compact('block', 'floor', 'design'));
     }
 
     public function store(Request $request) {
         $location = $request->location;
-        Relation::create(['user_id'=>Auth::user()->id, 'block_id'=>session('block'), 'floor_id'=>session('floor'), 'model_id'=>session('design'), 'state'=>1]);
+        Relation::create(['user_id'=>Auth::user()->id, 'block_id'=>$request['block'], 'floor_id'=>$request['floor'], 'model_id'=>$request['design'], 'state'=>1]);
         $user = Auth::user();
         $user->location = $location;
         $user->save();
-
         return redirect('final');
     }
     public function final() {

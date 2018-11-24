@@ -74,6 +74,9 @@
                         <b>Шуудан хүлээн авах хаяг</b>
                         <input type="text" class="form-control" name="location" required placeholder="1, Beomgok-ro, Dong-gu, Busan, 48723, REP. OF KOREA">
                     </div>
+                    <input type="hidden" name="block" value="{{$block}}">
+                    <input type="hidden" name="floor" value="{{$floor}}">
+                    <input type="hidden" name="design" value="{{$design->id}}">
                     <div class="col-md-3"></div>
                 </div>
                 <br>

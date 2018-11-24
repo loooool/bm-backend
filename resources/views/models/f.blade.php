@@ -118,7 +118,7 @@
                 </div>
             </div>
             <!--            row-n div-->
-            <a href="{{url("/models/choose/f")}}">
+            <a href="{{url("/models/6/block")}}">
                 <button class="btn btn-block btn-black" >Онлайн захиалга өгөх<br>1,950,000₮/мкв</button>
             </a>
             <img src="{{asset('front/assets/images/4-12.jpg')}}">
@@ -220,10 +220,10 @@
                 <div class="image-box wow fadeInUp">
 
                     <div class="image-box-thumbnail">
-                        <a href="e.html"><img src="{{asset('front/assets/images/81.75.jpg')}}" alt=""></a>
+                        <a href="{{url("/models/5")}}"><img src="{{asset('front/assets/images/81.75.jpg')}}" alt=""></a>
                     </div><!-- image-box-thumbnail -->
 
-                    <h5><a href="e.html">E загвар</a></h5>
+                    <h5><a href="{{url("/models/5")}}">E загвар</a></h5>
 
                     <div class="row">
                         <div class="col-md-6 text-center">81.75<br>мкв</div>
@@ -238,10 +238,10 @@
                 <div class="image-box wow fadeInUp">
 
                     <div class="image-box-thumbnail">
-                        <a href="g.html"><img src="{{asset('front/assets/images/52.98.jpg')}}" alt=""></a>
+                        <a href="{{url("/models/7")}}"><img src="{{asset('front/assets/images/52.98.jpg')}}" alt=""></a>
                     </div><!-- image-box-thumbnail -->
 
-                    <h5><a href="g.html">G загвар</a></h5>
+                    <h5><a href="{{url("/models/7")}}">G загвар</a></h5>
 
                     <div class="row">
                         <div class="col-md-6 text-center">52.98<br>мкв</div>
@@ -256,10 +256,10 @@
                 <div class="image-box wow fadeInUp">
 
                     <div class="image-box-thumbnail">
-                        <a href="h.html"><img src="{{asset('front/assets/images/47.jpg')}}" alt=""></a>
+                        <a href="{{url("/models/8")}}"><img src="{{asset('front/assets/images/47.jpg')}}" alt=""></a>
                     </div><!-- image-box-thumbnail -->
 
-                    <h5><a href="h.html">H загвар</a></h5>
+                    <h5><a href="{{url("/models/8")}}">H загвар</a></h5>
 
                     <div class="row">
                         <div class="col-md-6 text-center">47.59<br>мкв</div>

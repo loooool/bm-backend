@@ -83,6 +83,9 @@
                                     </div>
                                     <div class="col-md-1"></div>
                                 </div>
+                                <input type="hidden" name="design" value="{{$design}}">
+                                <input type="hidden" name="block" value="{{$block}}">
+                                <input type="hidden" name="floor" value="{{$floor}}">
 
                                 <div class="form-group row">
 
@@ -190,6 +193,9 @@
                                     </div>
                                     <div class="col-md-1"></div>
                                 </div>
+                                <input type="hidden" name="design" value="{{$design}}">
+                                <input type="hidden" name="block" value="{{$block}}">
+                                <input type="hidden" name="floor" value="{{$floor}}">
                                 <div class="form-group row">
 
                                     <div class="col-md-1"></div>

@@ -21,10 +21,12 @@ class UserRegisterController extends Controller
      */
 
 
-    public function index()
+    public function index($design, $block, $floor)
     {
-        //
-        return view('register');
+        if (Auth::check()) {
+            return redirect('/models/'.$design.'/block/'.$block.'/floor/'.$floor.'/contract');
+        }
+        return view('register', compact('design', 'block', 'floor'));
     }
 
     //-----------------REGISTER-----------
@@ -63,12 +65,14 @@ class UserRegisterController extends Controller
             'country' => $data['country']
         ]);
 
+
+
         //Login after register
         $credentials = $data->only('email', 'password');
 
         if (Auth::attempt($credentials)) {
             // Authentication passed...
-            return redirect()->intended('verification');
+            return redirect()->intended('/models/'.$data['design'].'/block/'.$data['block'].'/floor/'.$data['floor'].'/verification');
         }
 
 
@@ -84,33 +88,38 @@ class UserRegisterController extends Controller
 
         if (Auth::attempt($credentials)) {
             // Authentication passed...
-            return redirect()->intended('verification');
+            if(Auth::user()->verified == 1) {
+                return redirect()->intended('/models/'.$request['design'].'/block/'.$request['block'].'/floor/'.$request['floor'].'/contract');
+            } else {
+                return redirect()->intended('/models/'.$request['design'].'/block/'.$request['block'].'/floor/'.$request['floor'].'/verification');
+            }
+
         }
     }
 
 
     //SMS Verification
-    public function verification() {
+    public function verification($design, $block, $floor) {
         if(Auth::check()) {
             if (Auth::user()->verified == 0) {
                 if (session('verification_code')) {
-                    return view('verification');
+                    return view('verification', compact('design', 'block', 'floor'));
                 } else {
                     $phone_number = Auth::user()->phone_number;
                     $verification_code = str_random(4);
                     Twilio::message($phone_number, 'Pyramid Apartment баталгаажуулах код: ' . $verification_code);
                         session(['verification_code' => $verification_code]);
-
-                    return view('verification');
+                    return view('verification', compact('design', 'block', 'floor'));
                 }
             } else {
-                return redirect()->route('contract');
+                return redirect()->intended('/models/'.$design.'/block/'.$block.'/floor/'.$floor.'/contact');
             }
         } else {
             return redirect('welcome');
         }
 
     }
+
 
     //SMS Verifying
     public function verify(Request $request) {
@@ -119,7 +128,7 @@ class UserRegisterController extends Controller
                 if ($request->verification_code == session('verification_code')) {
                     User::find(Auth::user()->id)->update(['verified' => 1]);
                     session()->forget('verification_code');
-                    return redirect('/contract');
+                    return redirect('/models/'.$request['design'].'/block/'.$request['block'].'/floor/'.$request['floor'].'/contract');
                 } else {
                     session()->flash('error');
                     return redirect()->back();

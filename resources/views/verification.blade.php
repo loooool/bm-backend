@@ -65,8 +65,11 @@
 
                                     <div class="col-md-1"></div>
                                     <div class="col-md-10">
-                                        <input type="text" value="{{ old('register_number') }}" id="reg" class="form-control" name="verification_code"  required placeholder="Баталгаажуулах код*">
+                                        <input type="text"  id="reg" class="form-control" name="verification_code"  required placeholder="Баталгаажуулах код*">
                                     </div>
+                                    <input type="hidden" name="block" value="{{$block}}">
+                                    <input type="hidden" name="design" value="{{$design}}">
+                                    <input type="hidden" name="floor" value="{{$floor}}">
                                     <div class="col-md-1"></div>
                                 </div>
 
