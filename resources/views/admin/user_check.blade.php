@@ -27,19 +27,6 @@
                                 @endif </span></p>
                     </div>
 
-
-
-                    {{--<ul class="social-links list-inline m-t-30">--}}
-                        {{--<li class="list-inline-item">--}}
-                            {{--<a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="" data-original-title="Facebook"><i class="fa fa-facebook"></i></a>--}}
-                        {{--</li>--}}
-                        {{--<li class="list-inline-item">--}}
-                            {{--<a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="" data-original-title="Twitter"><i class="fa fa-twitter"></i></a>--}}
-                        {{--</li>--}}
-                        {{--<li class="list-inline-item">--}}
-                            {{--<a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="" data-original-title="Skype"><i class="fa fa-skype"></i></a>--}}
-                        {{--</li>--}}
-                    {{--</ul>--}}
                 </div>
             </div> <!-- end card-box -->
         </div> <!-- end col -->
@@ -94,25 +81,60 @@
                 </div>
             </div> <!-- end card-box -->
         </div> <!-- end col -->
+        @if($rela->state == 0)
+            <div class="col-xl-3 col-lg-4">
+                <div class="text-center card-box">
+                    <div class="member-card">
+                        <div class="">
+                            <h3 class="m-b-5">Гэрээний мэдээлэл</h3>
+                        </div>
 
-        <div class="col-xl-3 col-lg-4">
-            <div class="text-center card-box">
-                <div class="member-card">
-                    <div class="">
-                        <h3 class="m-b-5">Гэрээний мэдээлэл</h3>
+                        <div class="text-left m-t-40">
+
+                            <p class="text-highlight-dark font-13"><strong>Шуудангийн хаяг :</strong><span class="m-l-15">{{$user->location}}</span></p>
+
+                        </div>
+                        <a href="{{url('/home/user_check').'/'.$user->id.'/'.'action'}}"><button type="button" class="btn btn-success btn-sm w-sm waves-effect m-t-10 waves-light"> Гэрээ явуулсан</button></a>
                     </div>
+                </div> <!-- end card-box -->
+            </div>
+        @elseif($rela->state == 1)
+            <div class="col-xl-3 col-lg-4">
+                <div class="text-center card-box">
+                    <div class="member-card">
+                        <div class="">
+                            <h3 class="m-b-5">Гэрээний мэдээлэл</h3>
+                        </div>
 
-                    <div class="text-left m-t-40">
+                        <div class="text-left m-t-40">
 
-                        <p class="text-highlight-dark font-13"><strong>Шуудангийн хаяг :</strong><span class="m-l-15">{{$user->register_number}}</span></p>
+                            <p class="text-highlight-dark font-13"><strong>Гэрээ явуулсан огноо :</strong><span class="m-l-15"> {{$user->contract->sent_date}}</span></p>
+
+                        </div>
+                        <a href="{{url('/home/user_check').'/'.$user->id.'/'.'action1'}}"><button type="button" class="btn btn-danger btn-sm w-sm waves-effect m-t-10 waves-light"> Гэрээ хийсэн</button></a>
+                    </div>
+                </div> <!-- end card-box -->
+            </div>
+        @elseif($rela->state == 2 or $rela->state == 3)
+            <div class="col-xl-3 col-lg-4">
+                <div class="text-center card-box">
+                    <div class="member-card">
+                        <div class="">
+                            <h3 class="m-b-5">Гэрээний мэдээлэл</h3>
+                        </div>
+
+                        <div class="text-left m-t-40">
+
+                            <p class="text-danger font-13"><strong>Гэрээ амжилттай хийгдсэн</strong></p>
+                            <p class="text-highlight-dark font-13"><strong>Гэрээ хийсэн огноо :</strong><span class="m-l-15">{{$user->contract->completed_date}}</span></p>
+
+                        </div>
 
                     </div>
-                    <button type="button" class="btn btn-success btn-sm w-sm waves-effect m-t-10 waves-light">Гэрээ явуулсан</button>
-
-                </div>
-            </div> <!-- end card-box -->
-        </div>
-
+                </div> <!-- end card-box -->
+            </div>
+        @endif
+        @if($rela->state == 0 or $rela->state==1 or $rela->state==2)
         <div class="col-xl-3 col-lg-4">
             <div class="text-center card-box">
                 <div class="member-card">
@@ -123,13 +145,27 @@
 
                         <p class="text-highlight-dark font-13"><strong>Төлөх нийт үнэ :</strong><span class="m-l-15">{{$user->register_number}}</span></p>
                     </div>
-                    <button type="button" class="btn btn-danger btn-sm w-sm waves-effect m-t-10 waves-light">Төлбөр төлөгдсөн</button>
+                    <a href="{{url('/home/user_check').'/'.$user->id.'/'.'code'}}"><button type="button" class="btn btn-danger btn-sm w-sm waves-effect m-t-10 waves-light">Төлбөр төлөгдсөн</button></a>
 
                 </div>
             </div> <!-- end card-box -->
         </div>
 
-
+        @elseif($rela->state == 3)
+            <div class="col-xl-3 col-lg-4">
+                <div class="text-center card-box">
+                    <div class="member-card">
+                        <div class="">
+                            <h3 class="m-b-5">Төлбөрийн мэдээлэл</h3>
+                        </div>
+                        <div class="text-left m-t-40">
+                            <p class="text-danger font-13"><strong>Төлбөр амжилттай төлөгдсөн</strong><span class="m-l-15"></span></p>
+                            <p class="text-highlight-dark font-13"><strong>Төлбөр төлсөн огноо :</strong><span class="m-l-15">{{$user->contract->purchased_date}}</span></p>
+                        </div>
+                    </div>
+                </div> <!-- end card-box -->
+            </div>
+        @endif
 
 
     </div> <!-- end col -->

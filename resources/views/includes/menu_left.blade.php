@@ -7,17 +7,17 @@
 
                 <li>
                     <a href="{{route('home')}}" class="waves-effect waves-primary"><i
-                                class=" mdi mdi-scale-bathroom"></i><span> Мэдээллийн самбар </span></a>
+                                class=" ti-clipboard"></i><span> Мэдээллийн самбар </span></a>
                 </li>
 
                 <li>
                     <a href="{{route('usr')}}" class="waves-effect waves-primary"><i
-                                class=" ti-calendar"></i><span> Хэрэглэгчид</span></a>
+                                class=" ti-user"></i><span> Хэрэглэгчид</span></a>
                 </li>
 
                 <li>
                     <a href="{{route('contract_request')}}" class="waves-effect waves-primary"><i
-                                class=" ti-calendar"></i><span> Гэрээний хүсэлтүүд</span></a>
+                                class=" ti-email"></i><span> Гэрээний хүсэлтүүд</span></a>
                 </li>
 
 
