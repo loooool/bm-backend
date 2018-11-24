@@ -33,6 +33,17 @@ Route::post('god', [
 
 Route::get('home/user_check/{id}','AdminUserCheckController@index')->name('god_users_id');
 
+Route::get('home/user_check/{id}/action','AdminUserCheckController@action')->name('action');
+Route::get('home/user_check/{id}/action1','AdminUserCheckController@action1')->name('action1');
+
+Route::get('home/user_check/{id}/code','AdminUserCheckController@code')->name('code');
+
+Route::get('home/user_check/{id}/verify','AdminUserCheckController@verify')->name('verify');
+Route::post('home/user_check/{id}/verify','AdminUserCheckController@verify')->name('verify');
+
+
+
+
 Route::get('byegod', [
     'as' => 'logout',
     'uses' => 'Auth\LoginController@logout'

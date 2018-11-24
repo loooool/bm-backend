@@ -36,4 +36,5 @@ class HomeController extends Controller
         $user3 = $superuser->where('state','3');
         return view('home', compact('user','counter','superuser','user1','user2','user3'));
     }
+    
 }

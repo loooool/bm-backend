@@ -27,7 +27,11 @@ class User extends Authenticatable
     ];
     public function order(){
         return $this->hasOne('App\Relation','user_id','id');
-    }
 
+    }
+    public function contract(){
+        return $this->hasOne('App\Contract','user_id','id');
+
+    }
 
 }
