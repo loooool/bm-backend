@@ -16,7 +16,7 @@ class ContractController extends Controller
         $this->middleware('user.verification');
     }
 
-    public function index() {
+    public function index($design, $block, $floor) {
         $block = session('block');
         $floor = session('floor');
         $design = \App\Design::find(session('design'));

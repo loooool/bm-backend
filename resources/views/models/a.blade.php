@@ -102,7 +102,7 @@
             </div>
         </div>
         <!--            row-n div-->
-        <a href="{{url("/models/choose/a")}}">
+        <a href="{{url("/models/1/block")}}">
             <button class="btn btn-block btn-black" >Онлайн захиалга өгөх<br>1,950,000₮/мкв</button>
         </a>
 

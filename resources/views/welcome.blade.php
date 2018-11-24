@@ -307,10 +307,10 @@
                 <div class="image-box wow fadeInUp">
 
                     <div class="image-box-thumbnail">
-                        <a href="{{route('a')}}"><img src="{{asset('front/assets/images/37.jpg')}}" alt=""></a>
+                        <a href="{{url('/models/1/block')}}"><img src="{{asset('front/assets/images/37.jpg')}}" alt=""></a>
                     </div><!-- image-box-thumbnail -->
 
-                    <h5><a href="{{route('a')}}">A загвар</a></h5>
+                    <h5><a href="{{url('/models/1/block')}}">A загвар</a></h5>
 
                     <div class="row">
                         <div class="col-md-6 text-center">37.85<br>мкв</div>
@@ -326,10 +326,10 @@
                 <div class="image-box wow fadeInUp">
 
                     <div class="image-box-thumbnail">
-                        <a href="{{route('b')}}"><img src="{{asset('front/assets/images/69.73.jpg')}}" alt=""></a>
+                        <a href="{{url('/models/2/block')}}"><img src="{{asset('front/assets/images/69.73.jpg')}}" alt=""></a>
                     </div><!-- image-box-thumbnail -->
 
-                    <h5><a href="{{route('b')}}">B загвар</a></h5>
+                    <h5><a href="{{url('/models/2/block')}}">B загвар</a></h5>
 
                     <div class="row">
                         <div class="col-md-6 text-center">69.73<br>мкв</div>
@@ -344,10 +344,10 @@
                 <div class="image-box wow fadeInUp">
 
                     <div class="image-box-thumbnail">
-                        <a href="{{route('c')}}"><img src="{{asset('front/assets/images/51.47.jpg')}}" alt=""></a>
+                        <a href="{{url('/models/3/block')}}"><img src="{{asset('front/assets/images/51.47.jpg')}}" alt=""></a>
                     </div><!-- image-box-thumbnail -->
 
-                    <h5><a href="{{route('c')}}">C загвар</a></h5>
+                    <h5><a href="{{url('/models/3/block')}}">C загвар</a></h5>
 
                     <div class="row">
                         <div class="col-md-6 text-center">51.47<br>мкв</div>
