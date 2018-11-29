@@ -13,18 +13,11 @@
 
 use App\Counter;
 use Illuminate\Support\Facades\Auth;
+Route::get('test', function () {
+   
+});
 
-Route::get('/', function () {
-    if(session('home')) {
-    } else {
-        $counter = Counter::find(1);
-        $counter->views = $counter->views + 1;
-        $counter->save();
-        session()->put('home','1');
-    }
-    return view('welcome');
 
-})->name('welcome');
 
 
 //-----ADMIN SECTION
@@ -46,8 +39,6 @@ Route::get('home/user_check/{id}/code','AdminUserCheckController@code')->name('c
 
 Route::get('home/user_check/{id}/verify','AdminUserCheckController@verify')->name('verify');
 Route::post('home/user_check/{id}/verify','AdminUserCheckController@verify')->name('verify');
-
-
 
 
 Route::get('byegod', [
@@ -73,21 +64,28 @@ Route::get('/home/contract_request', 'ContractRequestController@index')->name('c
 Route::get('verify', 'VerifyController@index')->name('verify');
 Route::post('verify', 'VerifyController@store')->name('verify');
 
+//----WELCOME---
+Route::get('/', function () {
+    if(session('home')) {
+    } else {
+        $counter = Counter::find(1);
+        $counter->views = $counter->views + 1;
+        $counter->save();
+        session()->put('home','1');
+    }
+    return view('welcome');
 
+})->name('welcome');
 
+//------BLOG------
+Route::get('blog', 'BlogController@index');
+Route::get('blog/{id}', 'BlogController@show');
 
 
 //------MODELS------
 Route::get('/models', function () {
     return view('models');
 })->name('models');
-
-
-//------BLOCKS------
-Route::get('models/{design}/block/', function($design) {
-    $design = \App\Design::find($design);
-    return view('block', compact('design'));
-})->name('design.choose');
 Route::get('models/{design}', function($design) {
     if ($design == 1) {
         $model = 'a';
@@ -116,6 +114,16 @@ Route::get('models/{design}', function($design) {
 });
 
 
+
+//------BLOCKS------
+Route::get('models/{design}/block/', function($design) {
+    $design = \App\Design::find($design);
+    return view('block', compact('design'));
+})->name('design.choose');
+
+
+
+
 //------FLOOR------
 Route::get('models/{design}/block/{block}', function ($design, $block) {
     $design = \App\Design::find($design);
@@ -123,12 +131,6 @@ Route::get('models/{design}/block/{block}', function ($design, $block) {
     return view('floor', compact('design', 'block', 'relations'));
 //    return $relations->where('floor_id', 11)->first();
 })->name('block.choose');
-
-//------FLOOR------
-
-
-
-
 
 
 //--------Register------------

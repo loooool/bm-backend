@@ -2,23 +2,25 @@
 
 @section('menu')
 
-            <li class="megamenu">
-                <a href="{{route('welcome')}} ">Танилцуулга</a>
-            </li>
-            <li class="dropdown active">
-                <a href="{{route('models')}}">Байрны сонголтууд</a>
-            </li>
-            <li class="dropdown">
-                <a class="waves" href="talbai.html">Үйлчилгээний талбай</a>
-            </li>
-            <li class="megamenu">
-                <a href="aboutus.html">Гүйцэтгэгч</a>
-
-            </li>
+    <li class="megamenu">
+        <a href="{{route('welcome')}} ">Танилцуулга</a>
+    </li>
+    <li class="dropdown active">
+        <a href="{{route('models')}}">Байрны сонголтууд</a>
+    </li>
+    <li class="dropdown">
+        <a class="waves" href="{{url('blog')}}">Нийтлэлүүд</a>
+    </li>
+    <li class="megamenu">
+        <a href="{{url('user')}}">Нэвтрэх</a>
+    </li>
 @endsection
 @section('content')
     <br>
     <!--    row ehelsen-->
+    @if(session('already'))
+        <h4 class="text-center">Уучлаарай энэ байрыг захиалцан байна. Та давхар, блок эсвэл загвараа өөрчилнө үү</h4>
+    @endif
     <div class="row">
         <div class="col-md-1"></div>
         <div class="col-md-5">

@@ -1,6 +1,7 @@
 @extends('layouts.front')
 @section('menu')
 
+
     <li class="megamenu">
         <a href="{{route('welcome')}} ">Танилцуулга</a>
     </li>
@@ -8,11 +9,10 @@
         <a href="{{route('models')}}">Байрны сонголтууд</a>
     </li>
     <li class="dropdown">
-        <a class="waves" href="talbai.html">Үйлчилгээний талбай</a>
+        <a class="waves" href="{{url('blog')}}">Нийтлэлүүд</a>
     </li>
     <li class="megamenu">
-        <a href="aboutus.html">Гүйцэтгэгч</a>
-
+        <a href="{{url('user')}}">Нэвтрэх</a>
     </li>
 @endsection
 @section('content')
@@ -127,7 +127,7 @@
                 </div>
             </div>
             <!--            row-n div-->
-            <a href="{{url("/models/11")}}">
+            <a href="{{url("/models/11/block")}}">
                 <button class="btn btn-block btn-black" >Онлайн захиалга өгөх<br>1,950,000₮/мкв</button>
             </a>
             <img src="{{asset('front/assets/images/1-3-plan.jpg')}}">
@@ -203,8 +203,9 @@
             <h6>PYRAMID APARTMENT</h6>
             <h3>ОНЛАЙН ЗАХИАЛГА</h3>
             <br>
+            <a href="{{url("/models/1/block")}}">
             <button class="btn btn-white btn-outline waves waves-dark">ЗАХИАЛГА ӨГӨХ</button>
-
+            </a>
 
         </div><!-- headline -->
     </section>

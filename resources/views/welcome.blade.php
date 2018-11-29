@@ -9,10 +9,10 @@
                 <a href="{{route('models')}}">Байрны сонголтууд</a>
             </li>
             <li class="dropdown">
-                <a class="waves" href="talbai.html">Нийтлэлүүд</a>
+                <a class="waves" href="{{url('blog')}}">Нийтлэлүүд</a>
             </li>
             <li class="megamenu">
-                <a href="aboutus.html">Нэвтрэх</a>
+                <a href="{{url('user')}}">Нэвтрэх</a>
             </li>
     @endsection
 @section('content')
@@ -307,10 +307,10 @@
                 <div class="image-box wow fadeInUp">
 
                     <div class="image-box-thumbnail">
-                        <a href="{{url('/models/1/block')}}"><img src="{{asset('front/assets/images/37.jpg')}}" alt=""></a>
+                        <a href="{{url('/models/1')}}"><img src="{{asset('front/assets/images/37.jpg')}}" alt=""></a>
                     </div><!-- image-box-thumbnail -->
 
-                    <h5><a href="{{url('/models/1/block')}}">A загвар</a></h5>
+                    <h5><a href="{{url('/models/1')}}">A загвар</a></h5>
 
                     <div class="row">
                         <div class="col-md-6 text-center">37.85<br>мкв</div>
@@ -326,10 +326,10 @@
                 <div class="image-box wow fadeInUp">
 
                     <div class="image-box-thumbnail">
-                        <a href="{{url('/models/2/block')}}"><img src="{{asset('front/assets/images/69.73.jpg')}}" alt=""></a>
+                        <a href="{{url('/models/2')}}"><img src="{{asset('front/assets/images/69.73.jpg')}}" alt=""></a>
                     </div><!-- image-box-thumbnail -->
 
-                    <h5><a href="{{url('/models/2/block')}}">B загвар</a></h5>
+                    <h5><a href="{{url('/models/2')}}">B загвар</a></h5>
 
                     <div class="row">
                         <div class="col-md-6 text-center">69.73<br>мкв</div>
@@ -344,10 +344,10 @@
                 <div class="image-box wow fadeInUp">
 
                     <div class="image-box-thumbnail">
-                        <a href="{{url('/models/3/block')}}"><img src="{{asset('front/assets/images/51.47.jpg')}}" alt=""></a>
+                        <a href="{{url('/models/3')}}"><img src="{{asset('front/assets/images/51.47.jpg')}}" alt=""></a>
                     </div><!-- image-box-thumbnail -->
 
-                    <h5><a href="{{url('/models/3/block')}}">C загвар</a></h5>
+                    <h5><a href="{{url('/models/3')}}">C загвар</a></h5>
 
                     <div class="row">
                         <div class="col-md-6 text-center">51.47<br>мкв</div>
@@ -505,7 +505,10 @@
             <h6>PYRAMID APARTMENT</h6>
             <h3>ОНЛАЙН ЗАХИАЛГА</h3>
             <br>
-            <button class="btn btn-white btn-outline waves waves-dark">ЗАХИАЛГА ӨГӨХ</button>
+            <a href="{{url('models')}}">
+                <button class="btn btn-white btn-outline waves waves-dark">ЗАХИАЛГА ӨГӨХ</button>
+            </a>
+
 
 
         </div><!-- headline -->

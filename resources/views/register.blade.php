@@ -1,18 +1,17 @@
 @extends('layouts.front')
 @section('menu')
     <li class="megamenu">
-        <a href="{{route('welcome')}} ">Танилцуулга</a>
-    </li>
-    <li class="dropdown active">
-        <a href="{{route('models')}}">Байрны сонголтууд</a>
-    </li>
-    <li class="dropdown">
-        <a class="waves" href="talbai.html">Үйлчилгээний талбай</a>
-    </li>
-    <li class="megamenu">
-        <a href="aboutus.html">Гүйцэтгэгч</a>
-
-    </li>
+                <a href="{{route('welcome')}} ">Танилцуулга</a>
+            </li>
+            <li class="dropdown active">
+                <a href="{{route('models')}}">Байрны сонголтууд</a>
+            </li>
+            <li class="dropdown">
+                <a class="waves" href="{{url('blog')}}">Нийтлэлүүд</a>
+            </li>
+            <li class="megamenu">
+                <a href="{{url('user')}}">Нэвтрэх</a>
+            </li>
 
 @endsection
 @section('content')
@@ -69,7 +68,7 @@
 
                     </ul>
                     <div class="tab-content">
-                        <div id="login" class="tab-pane fade">
+                        <div id="login" class="tab-pane @if(session('')))fade">
                             <form method="POST" action="{{ route('log') }}" aria-label="">
                                 @csrf
 

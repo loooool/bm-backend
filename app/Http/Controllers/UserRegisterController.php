@@ -94,6 +94,9 @@ class UserRegisterController extends Controller
                 return redirect()->intended('/models/'.$request['design'].'/block/'.$request['block'].'/floor/'.$request['floor'].'/verification');
             }
 
+        } else {
+            session()->flash('login');
+            return redirect()->intended('/models/'.$request['design'].'/block/'.$request['block'].'/floor/'.$request['floor']);
         }
     }
 
