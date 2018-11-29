@@ -19,8 +19,10 @@
                     <a href="{{route('contract_request')}}" class="waves-effect waves-primary"><i
                                 class=" ti-email"></i><span> Гэрээний хүсэлтүүд</span></a>
                 </li>
-
-
+                <li>
+                    <a href="{{route('manual')}}" class="waves-effect waves-primary"><i
+                                class=" ti-upload"></i><span> Зарагдсан байр нэмэх </span></a>
+                </li>
 
                 <li class="menu-title">Үйлдэл</li>
 

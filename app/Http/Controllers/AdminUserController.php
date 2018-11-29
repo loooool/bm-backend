@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Relation;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -14,8 +15,11 @@ class AdminUserController extends Controller
         $this->middleware('verification');
         $this->middleware('Administrator');
     }
-    public function index(){
+
+    public function index()
+    {
         $members = User::all();
-        return view('admin.users',compact('members'));
+
+        return view('admin.users', compact('members'));
     }
 }

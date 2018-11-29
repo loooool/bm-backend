@@ -13,7 +13,6 @@
                     </div>
                     {{--<button type="button" class="btn btn-success btn-sm w-sm waves-effect m-t-10 waves-light">Follow</button>--}}
                     {{--<button type="button" class="btn btn-danger btn-sm w-sm waves-effect m-t-10 waves-light">Message</button>--}}
-
                     <div class="text-left m-t-40">
 
                         <p class="text-highlight-dark font-13"><strong>Регистр :</strong><span class="m-l-15">{{$user->register_number}}</span></p>
