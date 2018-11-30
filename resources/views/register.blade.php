@@ -68,7 +68,7 @@
 
                     </ul>
                     <div class="tab-content">
-                        <div id="login" class="tab-pane @if(session('')))fade">
+                        <div id="login" class="tab-pane fade">
                             <form method="POST" action="{{ route('log') }}" aria-label="">
                                 @csrf
 

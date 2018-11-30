@@ -78,12 +78,37 @@ Route::get('/models', function () {
     return view('models');
 })->name('models');
 
-
+Route::get('models/{design}', function($design) {
+    if ($design == 1) {
+        $model = 'a';
+    } elseif ($design == 2) {
+        $model = 'b';
+    } elseif ($design == 3) {
+        $model = 'c';
+    } elseif ($design == 4) {
+        $model = 'd';
+    } elseif ($design == 5) {
+        $model = 'e';
+    } elseif ($design == 6) {
+        $model = 'f';
+    } elseif ($design == 7) {
+        $model = 'g';
+    } elseif ($design == 8) {
+        $model = 'h';
+    } elseif ($design == 9) {
+        $model = 'i';
+    } elseif ($design == 10) {
+        $model = 'j';
+    } else {
+        $model = 'k';
+    }
+    return view('models.'.$model);
+});
 //------BLOCKS------
-Route::get('models/{design}/block/', function($design) {
+Route::get('models/{design}/block', function($design) {
     $design = \App\Design::find($design);
     return view('block', compact('design'));
-})->name('design.choose');
+});
 
 
 //------FLOOR------
@@ -93,67 +118,18 @@ Route::get('models/{design}/block/{block}', function ($design, $block) {
     return view('floor', compact('design', 'block', 'relations'));
 //    return $relations->where('floor_id', 11)->first();
 })->name('block.choose');
-
-//------FLOOR------
-Route::get('models/{design}/block/{block}/floor/{floor}', function ($design, $block) {
-    $design = \App\Design::find($design);
-    $relations = \App\Relation::where('model_id', $design->id)->where('block_id', $block)->orderBy('floor_id', 'desc')->get();
-    return view('floor', compact('design', 'block', 'relations'));
-//    return $relations->where('floor_id', 11)->first();
-})->name('block.choose');
-
-
-Route::get('models/{design}/block/{block}/floor/{floor}/contract', 'ContractController@index');
-
-
-
-
-
-
-Route::get('/floor/{id}', function($id) {
-    if (!empty(session('block') && !empty(session('design')))) {
-        if (empty(\App\Relation::all()->where('block_id', session('block'))->
-        where('model_id', session('design'))->where('floor_id', $id)->
-        whereIn('state', [1, 2, 3])->first())) {
-            if (session('design') == 1 or session('design') == 2 or session('design') == 9) {
-                if ($id < 4) {
-                    session()->put('floor', $id);
-                    return redirect(route('reg'));
-                } else {
-                    //uuuuuuuuuuuuuuuuuuuuuuuuuu
-                }
-
-            } elseif(session('design') == 11 or session('design') == 10) {
-                if ($id > 3) {
-                    session()->put('floor', $id);
-                    return redirect(route('reg'));
-                } else {
-                    //uuuuuuuuuuuuuuuuuuuuuuuuuu
-                }
-            } else {
-                session()->put('floor', $id);
-                return redirect(route('reg'));
-            }
-
-        } else {
-            session()->flash('not_empty', 'Уучлаарай захиалцан байна');
-            return redirect(route('floor'));
-        }
-
-    } else {
-        return redirect()->route('welcome');
-    }
-});
 //-------FLOOR END
 
 
-
 //--------Register------------
-Route::get('/reg', 'UserRegisterController@index')->middleware('AuthCheck')->name('reg');
-Route::post('/reg', 'UserRegisterController@store')->middleware('AuthCheck')->name('reg');
-Route::post('/log', 'UserRegisterController@authenticate')->middleware('AuthCheck')->name('log');
+Route::get('/models/{design}/block/{block}/floor/{floor}', 'UserRegisterController@index')->name('reg');
+Route::post('/reg', 'UserRegisterController@store')->name('reg');
+Route::post('/log', 'UserRegisterController@authenticate')->name('log');
 Route::get('/logout', 'Auth\LoginController@logout');
-Route::get('/verification', 'UserRegisterController@verification');
+//Route::get('/verification', 'UserRegisterController@verification');
+Route::get('/models/{design}/block/{block}/floor/{floor}/verification', 'UserRegisterController@verification');
+
+Route::get('/models/{design}/block/{block}/floor/{floor}/contract', 'ContractController@index');
 Route::post('/verification', 'UserRegisterController@verify')->name('verification');
 
 
