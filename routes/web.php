@@ -14,6 +14,16 @@
 use App\Counter;
 use Illuminate\Support\Facades\Auth;
 
+Route::get('test', function () {
+    $n = 10;
+    $s = 1000;
+    for ($i = 0; $i<=$n; $i++) {
+        $s = $s * 2653;
+        $s = $s / 2633;
+    }
+    return $s;
+});
+
 Route::get('/', function () {
     $counter = Counter::find(1);
     $counter->views = $counter->views + 1;
@@ -21,6 +31,9 @@ Route::get('/', function () {
     return view('welcome');
 
 })->name('welcome');
+
+Route::get('blog', 'BlogController@index');
+Route::get('blog/{id}', 'BlogController@show');
 
 
 //-----ADMIN SECTION
@@ -59,6 +72,9 @@ Route::post('register', [
     'as' => '',
     'uses' => 'Auth\RegisterController@register'
 ]);
+
+
+
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/home/users', 'AdminUserController@index')->name('usr');
@@ -126,7 +142,6 @@ Route::get('/models/{design}/block/{block}/floor/{floor}', 'UserRegisterControll
 Route::post('/reg', 'UserRegisterController@store')->name('reg');
 Route::post('/log', 'UserRegisterController@authenticate')->name('log');
 Route::get('/logout', 'Auth\LoginController@logout');
-//Route::get('/verification', 'UserRegisterController@verification');
 Route::get('/models/{design}/block/{block}/floor/{floor}/verification', 'UserRegisterController@verification');
 
 Route::get('/models/{design}/block/{block}/floor/{floor}/contract', 'ContractController@index');
@@ -139,3 +154,7 @@ Route::post('/contract', 'ContractController@store')->name('contract');
 
 //---------FINAL-----------
 Route::get('final', 'ContractController@final')->name('final');
+
+Route::get('user', function(){
+    return view('login');
+});

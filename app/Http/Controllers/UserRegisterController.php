@@ -24,6 +24,9 @@ class UserRegisterController extends Controller
     public function index($design, $block, $floor)
     {
         if (Auth::check()) {
+            if (Auth::user()->verified == 0) {
+                return redirect('/models/'.$design.'/block/'.$block.'/floor/'.$floor.'/verification');
+            }
             return redirect('/models/'.$design.'/block/'.$block.'/floor/'.$floor.'/contract');
         }
         return view('register', compact('design', 'block', 'floor'));
@@ -81,7 +84,7 @@ class UserRegisterController extends Controller
 
 
 
-    //---------LOG IN----------------------
+    //---------LOG IN WHILE CHOOSING----------------------
     public function authenticate(Request $request)
     {
         $credentials = $request->only('email', 'password');
@@ -97,6 +100,28 @@ class UserRegisterController extends Controller
         } else {
             session()->flash('login');
             return redirect()->intended('/models/'.$request['design'].'/block/'.$request['block'].'/floor/'.$request['floor']);
+        }
+    }
+
+    //---------LOG IN WITHOUT CHOOSING----------------------
+    public function authentication(Request $request)
+    {
+        $credentials = $request->only('email', 'password');
+
+        if (Auth::attempt($credentials)) {
+            // Authentication passed...
+            if(Auth::user()->verified == 1) {
+                if (Auth::user()->order) {
+                    return redirect()->intended('final');
+                }
+                return redirect()->intended('/models/');
+            } else {
+                return redirect()->intended('/verification');
+            }
+
+        } else {
+            session()->flash('login');
+            return redirect()->intended('user');
         }
     }
 
@@ -132,6 +157,22 @@ class UserRegisterController extends Controller
                     User::find(Auth::user()->id)->update(['verified' => 1]);
                     session()->forget('verification_code');
                     return redirect('/models/'.$request['design'].'/block/'.$request['block'].'/floor/'.$request['floor'].'/contract');
+                } else {
+                    session()->flash('error');
+                    return redirect()->back();
+                }
+            }
+        }
+    }
+
+    //SMS Verifying
+    public function verifyNotChoosing(Request $request) {
+        if (Auth::user()->verified == 0) {
+            if (session('verification_code')) {
+                if ($request->verification_code == session('verification_code')) {
+                    User::find(Auth::user()->id)->update(['verified' => 1]);
+                    session()->forget('verification_code');
+                    return redirect('final');
                 } else {
                     session()->flash('error');
                     return redirect()->back();

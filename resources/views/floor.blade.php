@@ -336,7 +336,6 @@
                               @else
                               onmouseover="hoverText('Уучлаарай захиалгатай байр байна')"
                               coords="219,359,604,361,604,394,219,394"
-                              href="{{url('/models/'.$design->id.'/block/'.$block.'/floor/4')}}"
                               @endif
                                 @endif>
                         <area shape=poly data-toggle="tooltip"
@@ -349,7 +348,6 @@
                               @else
                               onmouseover="hoverText('Уучлаарай захиалгатай байр байна')"
                               coords="220,394,604,395,604,428,219,427"
-                              href="{{url('/models/'.$design->id.'/block/'.$block.'/floor/3')}}"
                               @endif
                                @endif >
                         <area shape=poly data-toggle="tooltip"
@@ -362,7 +360,6 @@
                               @else
                               onmouseover="hoverText('Уучлаарай захиалгатай байр байна')"
                               coords="220,428,604,428,603,465,220,462"
-                              href="{{url('/models/'.$design->id.'/block/'.$block.'/floor/2')}}"
                               @endif
                                @endif>
                         <area shape=poly data-toggle="tooltip"
@@ -375,7 +372,6 @@
                               @else
                               onmouseover="hoverText('Уучлаарай захиалгатай байр байна')"
                               coords="220,463,604,464,604,499,221,496"
-                              href="{{url('/models/'.$design->id.'/block/'.$block.'/floor/1')}}"
                                 @endif
                               @endif >
 
