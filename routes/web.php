@@ -85,7 +85,8 @@ Route::get('/home/contract_request', 'ContractRequestController@index')->name('c
 Route::get('verify', 'VerifyController@index')->name('verify');
 Route::post('verify', 'VerifyController@store')->name('verify');
 
-
+Route::get('/home/manual', 'ManualEnter@index')->name('manual');
+Route::post('/home/manual', 'ManualEnter@store')->name('manual');
 
 
 
