@@ -23,6 +23,10 @@
                     <a href="{{route('manual')}}" class="waves-effect waves-primary"><i
                                 class=" ti-upload"></i><span> Зарагдсан байр нэмэх </span></a>
                 </li>
+                <li>
+                    <a href="{{route('blog')}}" class="waves-effect waves-primary"><i
+                                class=" ti-pencil"></i><span> Нийтлэл оруулах </span></a>
+                </li>
 
 
                 <li class="menu-title">Үйлдэл</li>

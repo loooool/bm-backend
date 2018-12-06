@@ -2,6 +2,8 @@
 @section('header')
 @endsection
 @section('content')
+
+
     <div class="content">
     <div class="row">
         <div class="col-xl-3 col-lg-4">
@@ -9,7 +11,11 @@
                 <div class="member-card">
                     <div class="">
                         <h3 class="m-b-5">{{$user->name}}  {{$user->last_name}}</h3>
-                        <p class="text-muted"><h4>{{$user->phone_number}}</h4></p>
+                        <p class="text-muted"><h4>Утас:{{$user->phone_number}}</h4></p>
+                        @if($rela->state == 3)
+                        @else
+                        <a href="{{url('/home/user_check').'/'.$rela->id.'/'.'cancel'}}"><button type="button" class="btn btn-danger btn-sm w-sm waves-effect m-t-10 waves-light">Хэрэглэгчийн захиалгыг цуцлах</button></a>
+                        @endif
                     </div>
                     {{--<button type="button" class="btn btn-success btn-sm w-sm waves-effect m-t-10 waves-light">Follow</button>--}}
                     {{--<button type="button" class="btn btn-danger btn-sm w-sm waves-effect m-t-10 waves-light">Message</button>--}}
@@ -142,7 +148,7 @@
                     </div>
                     <div class="text-left m-t-40">
 
-                        <p class="text-highlight-dark font-13"><strong>Төлөх нийт үнэ :</strong><span class="m-l-15">{{$user->register_number}}</span></p>
+                        <p class="text-highlight-dark font-13"><strong>Төлөх нийт үнэ :</strong><span class="m-l-15">{{$total}} төгрөг</span></p>
                     </div>
                     <a href="{{url('/home/user_check').'/'.$user->id.'/'.'code'}}"><button type="button" class="btn btn-danger btn-sm w-sm waves-effect m-t-10 waves-light">Төлбөр төлөгдсөн</button></a>
 
@@ -169,6 +175,8 @@
 
     </div> <!-- end col -->
     </div>
+
+
 @endsection
 @section('footer')
 @endsection

@@ -67,6 +67,7 @@ Route::get('home/user_check/{id}/code','AdminUserCheckController@code')->name('c
 Route::get('home/user_check/{id}/verify','AdminUserCheckController@verify')->name('verify');
 Route::post('home/user_check/{id}/verify','AdminUserCheckController@verify')->name('verify');
 
+Route::get('home/user_check/{id}/cancel','AdminUserCheckController@cancel')->name('cancel');
 
 
 
@@ -99,6 +100,9 @@ Route::post('verify', 'VerifyController@store')->name('verify');
 Route::get('/home/manual', 'ManualEnter@index')->name('manual');
 Route::post('/home/manual', 'ManualEnter@store')->name('manual');
 
+Route::get('/home/blog', 'BlogController@view')->name('blog');
+Route::post('/home/blog', 'BlogController@store')->name('blog');
+Route::get('/home/blog/{id}','BlogController@remove')->name('remove');
 
 
 //------MODELS------
