@@ -8,12 +8,7 @@ use App\Http\Controllers\Controller;
 
 class BlogController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth');
-        $this->middleware('verification');
-        $this->middleware('Administrator');
-    }
+  //niitlel bichih controller
     public function index() {
         $blogs = Blog::all();
         return view('blog', compact('blogs'));
