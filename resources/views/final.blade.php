@@ -51,6 +51,9 @@
         <div class="row justify-content-center">
             <div class="col-md-2"></div>
             <div class="col-md-8">
+                @if(session('onlyone'))
+                    <p class="text-center">Уучлаарай та зөвхөн нэг байр захиалах боломжтой</p>
+                @endif
                 <table class="table text-center">
                     <tr>
                         <td>{{$design->name}}</td>

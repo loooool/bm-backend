@@ -45,10 +45,8 @@
                     </ul>
                     <div class="tab-content">
                         <div id="login" class="tab-pane active">
-                            <form method="POST" action="{{ route('log') }}" aria-label="">
+                            <form method="POST" action="{{url('user')}}" aria-label="">
                                 @csrf
-
-
                                 <div class="form-group row">
 
                                     <div class="col-md-1"></div>
@@ -64,8 +62,10 @@
                                     <div class="col-md-1"></div>
                                     <div class="col-md-10">
                                         <input id="login_password" type="password" class="form-control" name="password"  required placeholder="Нууц үг*">
-
+                                        @if(session('login'))<p>Уучлаарай мэдээлэл буруу байна</p>@endif
                                     </div>
+
+
                                     <div class="col-md-1"></div>
                                 </div>
 

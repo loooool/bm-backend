@@ -11,4 +11,8 @@ class Relation extends Model
     public function user(){
         return $this->hasOne('App\User','id','user_id');
     }
+
+    public function contract() {
+        return $this->hasOne('App\Contract', 'user_id', 'user_id');
+    }
 }

@@ -21,6 +21,9 @@
     @if(session('already'))
         <h4 class="text-center">Уучлаарай энэ байрыг захиалцан байна. Та давхар, блок эсвэл загвараа өөрчилнө үү</h4>
     @endif
+    @if(session('order'))
+        <h4 class="text-center">Уучлаарай та эхлээд байраа захиална уу</h4>
+    @endif
     <div class="row">
         <div class="col-md-1"></div>
         <div class="col-md-5">

@@ -25,9 +25,20 @@ Route::get('test', function () {
 });
 
 Route::get('/', function () {
-    $counter = Counter::find(1);
-    $counter->views = $counter->views + 1;
-    $counter->save();
+    $d = strtotime("-2 weeks");
+    $relations = \App\Relation::where('state', 1)->whereDate('updated_at', '<', date('Y-m-d', $d));
+    foreach ($relations->get() as $relation) {
+        $relation->contract->delete();
+        $relation->delete();
+    }
+    if (session('welcome')){
+    } else {
+        session()->put('welcome', 'd');
+        $counter = Counter::find(1);
+        $counter->views = $counter->views + 1;
+        $counter->save();
+    }
+
     return view('welcome');
 
 })->name('welcome');
@@ -119,6 +130,14 @@ Route::get('models/{design}', function($design) {
     } else {
         $model = 'k';
     }
+    //Counter
+    if (session($model)){
+    } else {
+        session()->put($model, 'd');
+        $counter = Counter::find(1);
+        $counter->$model = $counter->$model + 1;
+        $counter->save();
+    }
     return view('models.'.$model);
 });
 //------BLOCKS------
@@ -157,5 +176,9 @@ Route::post('/contract', 'ContractController@store')->name('contract');
 Route::get('final', 'ContractController@final')->name('final');
 
 Route::get('user', function(){
+    if (Auth::check()) {
+        return redirect('final');
+    }
     return view('login');
 });
+Route::post('user', 'UserRegisterController@authentication');

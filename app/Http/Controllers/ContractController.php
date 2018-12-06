@@ -28,27 +28,35 @@ class ContractController extends Controller
 
     public function store(Request $request) {
         if (Auth::user()->verified == 1) {
-        $location = $request->location;
-        if(Relation::all()->where('block_id', $request['block'])->where('floor_id', $request['floor'])->where('model_id', $request['design'])) {
-            Relation::create(['user_id'=>Auth::user()->id, 'block_id'=>$request['block'], 'floor_id'=>$request['floor'], 'model_id'=>$request['design'], 'state'=>1]);
-            $user = Auth::user();
-            $user->location = $location;
-            $user->save();
-            return redirect('final');
-        }
-
-        session()->flash('already');
-        return redirect('models');
+            if (Auth::user()->order) {
+                session()->flash('onlyone');
+                return redirect('final');
+            }
+            $location = $request->location;
+            if(Relation::all()->where('block_id', $request['block'])->where('floor_id', $request['floor'])->where('model_id', $request['design'])) {
+                Relation::create(['user_id'=>Auth::user()->id, 'block_id'=>$request['block'], 'floor_id'=>$request['floor'], 'model_id'=>$request['design'], 'state'=>1]);
+                $user = Auth::user();
+                $user->location = $location;
+                $user->save();
+                return redirect('final');
+            }
+            session()->flash('already');
+            return redirect('models');
         } else {
             return redirect('/models/'.$request['design'].'/block/'.$request['block'].'/floor/'.$request['floor'].'/verification');
         }
-
     }
+
     public function final() {
-        $relation = Auth::user()->order;
-        $block = $relation->block_id;
-        $floor = $relation->floor_id;
-        $design = Design::find($relation->model_id);
-        return view('final', compact('block', 'floor', 'design'));
+        if($relation = Auth::user()->order) {
+            $block = $relation->block_id;
+            $floor = $relation->floor_id;
+            $design = Design::find($relation->model_id);
+            return view('final', compact('block', 'floor', 'design'));
+        } else {
+            session()->flash('order');
+            return redirect('models');
+        }
+
     }
 }
