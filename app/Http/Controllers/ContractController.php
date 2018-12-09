@@ -33,15 +33,17 @@ class ContractController extends Controller
                 return redirect('final');
             }
             $location = $request->location;
-            if(Relation::where('block_id', $request['block'])->where('floor_id', $request['floor'])->where('model_id', $request['design'])->get()) {
+            if(Relation::all()->where('block_id', $request['block'])->where('floor_id', $request['floor'])->where('model_id', $request['design'])) {
+                session()->flash('already');
+                return redirect('models');
+            } else {
                 Relation::create(['user_id'=>Auth::user()->id, 'block_id'=>$request['block'], 'floor_id'=>$request['floor'], 'model_id'=>$request['design'], 'state'=>0]);
                 $user = Auth::user();
                 $user->location = $location;
                 $user->save();
                 return redirect('final');
             }
-            session()->flash('already');
-            return redirect('models');
+
         } else {
             return redirect('/models/'.$request['design'].'/block/'.$request['block'].'/floor/'.$request['floor'].'/verification');
         }
