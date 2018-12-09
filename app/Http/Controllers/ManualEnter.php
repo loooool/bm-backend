@@ -31,5 +31,24 @@ class ManualEnter extends Controller
             return redirect('/home/manual');
         }
     }
+    public function check(){
+        $request = null;
+        $check=0;
+        return view('admin.check',compact('request','check'));
+    }
+    public function checkap(Request $request)
+    {
+        if ($relation=Relation::all()->where('block_id', $request['block'])->where('floor_id', $request['floor'])->where('model_id', $request['model'])->first()) {
+            $user = User::find($relation->user_id);
+            $rela = Relation::all()->where('user_id',$relation->user_id)->whereIn('state',['0','1','2','3'])->last();
+            $total = $rela->design->square * 1950000;
+            $check = 1;
+            return view('admin.check',compact('user','rela','total','request','check'));
+        }
+        else{
+            $check = 2;
+            return view('admin.check', compact('request','check'));
+        }
+    }
 
 }

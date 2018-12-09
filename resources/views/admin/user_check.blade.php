@@ -48,7 +48,7 @@
 
                     <div class="text-left m-t-40">
 
-                        <p class="text-highlight-dark font-13"><strong>Блок :</strong><span class="m-l-15">@if($rela->block_id == 1)
+                        <p class="text-highlight-dark font-13"><strong>Сонгосон блок :</strong><span class="m-l-15">@if($rela->block_id == 1)
                                     <td>A</td>
                                 @elseif($rela->block_id == 2)
                                     <td>B</td>
@@ -56,10 +56,10 @@
                                     <td>C</td>
                                 @endif</span></p>
 
-                        <p class="text-highlight-dark font-13"><strong>Давхар :</strong> <span class="m-l-15"> {{$rela->floor_id}}  </span></p>
+                        <p class="text-highlight-dark font-13"><strong>Сонгосон давхар :</strong> <span class="m-l-15"> {{$rela->floor_id}}  </span></p>
 
 
-                        <p class="text-highlight-dark font-13"><strong>Загвар :</strong> <span class="m-l-15">@if($rela->model_id == 1)
+                        <p class="text-highlight-dark font-13"><strong>Сонгосон загвар :</strong> <span class="m-l-15">@if($rela->model_id == 1)
                                     <td>A</td>
                                 @elseif($rela->model_id == 2)
                                     <td>B</td>

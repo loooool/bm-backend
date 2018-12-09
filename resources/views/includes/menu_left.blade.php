@@ -24,10 +24,13 @@
                                 class=" ti-upload"></i><span> Зарагдсан байр нэмэх </span></a>
                 </li>
                 <li>
+                    <a href="{{route('check')}}" class="waves-effect waves-primary"><i
+                                class=" ti-search"></i><span> Байр шалгах</span></a>
+                </li>
+                <li>
                     <a href="{{route('blog')}}" class="waves-effect waves-primary"><i
                                 class=" ti-pencil"></i><span> Нийтлэл оруулах </span></a>
                 </li>
-
 
                 <li class="menu-title">Үйлдэл</li>
 

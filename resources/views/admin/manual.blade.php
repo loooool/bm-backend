@@ -68,8 +68,9 @@
                 <br>
                 <button class="btn btn-info btn-block" type="submit">Мэдээлэл оруулах</button>
 
-            </div>
             </form>
+            </div>
+
         </div><!-- end col-->
         <div class="col-md-9">
 

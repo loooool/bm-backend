@@ -102,7 +102,8 @@ Route::get('/home/blog', 'BlogController@view')->name('blog');
 Route::post('/home/blog', 'BlogController@store')->name('blog');
 Route::get('/home/blog/{id}','BlogController@remove')->name('remove');
 
-
+Route::get('/home/check','ManualEnter@check')->name('check');
+Route::post('/home/check','ManualEnter@checkap')->name('check');
 //------MODELS------
 Route::get('/models', function () {
     return view('models');
