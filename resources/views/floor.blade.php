@@ -128,7 +128,7 @@
         <a class="waves" href="{{url('blog')}}">Нийтлэлүүд</a>
     </li>
     <li class="megamenu">
-        <a href="{{url('user')}}">Нэвтрэх</a>
+        <a href="{{url('user')}}">@if(Auth::user()){{Auth::user()->name}} @else Нэвтрэх @endif</a>
     </li>
 @endsection
 @section('content')
