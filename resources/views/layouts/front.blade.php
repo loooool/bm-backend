@@ -135,10 +135,9 @@
                             <h6 class="widget-title">Холбоосууд</h6>
 
                             <ul>
-                                <li><a href="index.html">Танилцуулга</a></li>
-                                <li><a href="bair.html">Байрны сонголтууд</a></li>
-                                <li><a href="uilchilgee.html">Үйлчилгээний талбай</a></li>
-                                <li><a href="guitsetgegch.html">Гүйцэтгэгч</a></li>
+                                <li><a href="{{url('/')}}">Танилцуулга</a></li>
+                                <li><a href="{{url('models')}}">Байрны сонголтууд</a></li>
+                                <li><a href="{{url('blog')}}">Нийтлэл</a></li>
                             </ul>
 
                         </div><!-- widget-pages -->

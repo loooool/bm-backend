@@ -1,5 +1,10 @@
 @extends('layouts.front')
 @section('header')
+    <meta property="og:url"           content="{{url('/blog'.'/'.$blog->id)}}" />
+    <meta property="og:type"          content="website" />
+    <meta property="og:title"         content="{{$blog->title}}" />
+    <meta property="og:description"   content="<?php echo str_limit($blog->content, 250);?>" />
+    <meta property="og:image"         content="{{asset('assets/images/blog').'/'.$blog->photos->first()->path}}" />
     @endsection
 @section('menu')
             <li class="megamenu active">
@@ -449,7 +454,7 @@
 
                     <div class="service-box-content">
 
-                        <h5><a href="">МАШИНЫ ЗОГСООЛ</a></h5>
+                        <h5>МАШИНЫ ЗОГСООЛ</h5>
 
                         <p>
                             Таны авто машиныг найдвартай хамгаалах цэвэр тохилог дулаан орчныг бүрдүүлсэн авто машины зогсоол
@@ -467,7 +472,7 @@
 
                     <div class="service-box-content">
 
-                        <h5><a href="">ХАРУУЛ ХАМГААЛАЛТ</a></h5>
+                        <h5>ХАРУУЛ ХАМГААЛАЛТ</h5>
 
                         <p>
                             24 цагийн дохиолол, харуул хамгаалалт бүхий аж төрөх аюулгүй орчныг бүрдүүлсэн
@@ -485,7 +490,7 @@
 
                     <div class="service-box-content">
 
-                        <h5><a href="">НОГООН БАЙГУУЛАМЖ</a></h5>
+                        <h5>НОГООН БАЙГУУЛАМЖ</h5>
 
                         <p>
                             Ногоон байгууламж бүхий салхилах талбай, хүүхдийн тоглоомын талбай, сагсан бөмбөгийн талбайтай.
@@ -508,8 +513,6 @@
             <a href="{{url('models')}}">
                 <button class="btn btn-white btn-outline waves waves-dark">ЗАХИАЛГА ӨГӨХ</button>
             </a>
-
-
 
         </div><!-- headline -->
     </section>

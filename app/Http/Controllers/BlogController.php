@@ -10,7 +10,7 @@ class BlogController extends Controller
 {
   //niitlel bichih controller
     public function index() {
-        $blogs = Blog::all();
+        $blogs = Blog::all()->sortByDesc('created_at');
         return view('blog', compact('blogs'));
     }
     public function show($id) {
