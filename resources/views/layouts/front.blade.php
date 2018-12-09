@@ -74,7 +74,7 @@
 
                     <!-- LOGO -->
                     <div id="logo">
-                        <a href="index.html">
+                        <a href="{{url('/')}}">
                             <img src="{{asset('front/assets/images/logo_white.png')}}" alt="" width="200px">
                         </a>
                     </div><!-- LOGO -->

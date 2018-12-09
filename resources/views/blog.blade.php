@@ -35,7 +35,7 @@
                 <div class="blog-article">
 
                     <div class="blog-article-thumbnail">
-                        <a href="{{url('/blog'.'/'.$blog->id)}}"><img src="@if($blog->photos->first()){{asset('assets/images/blog').'/'.$blog->photos->first()->path}}"@endif alt=""></a>
+                        <a href="{{url('/blog'.'/'.$blog->id)}}"><img src="@if($blog->photos->first()){{asset('assets/images').'/'.$blog->photos->first()->path}}"@endif alt=""></a>
                     </div><!-- blog-article-thumbnail -->
 
                     <h4 class="blog-article-title"><a href="{{url('/blog'.'/'.$blog->id)}}"><b>{{$blog->title}}</b></a></h4>

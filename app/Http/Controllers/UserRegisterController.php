@@ -110,14 +110,11 @@ class UserRegisterController extends Controller
 
         if (Auth::attempt($credentials)) {
             // Authentication passed...
-            if(Auth::user()->verified == 1) {
                 if (Auth::user()->order) {
                     return redirect()->intended('final');
                 }
+                session()->flash('order');
                 return redirect()->intended('/models/');
-            } else {
-                return redirect()->intended('/verification');
-            }
 
         } else {
             session()->flash('login');
