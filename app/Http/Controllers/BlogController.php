@@ -19,35 +19,43 @@ class BlogController extends Controller
         return view('post', compact('blog'));
     }
     public function view(){
+        if(Auth::check()) {
         if(Auth::user()->email == 'khatnaa3139@gmail.com') {
             $blog = Blog::all();
             return view('admin.blog',compact('blog'));
         } else {
             return redirect()->back();
         }
+        }
+
 
     }
     public function store(Request $request) {
-        if(Auth::user()->email == 'khatnaa3139@gmail.com') {
-            $blog = Blog::create(['title'=>$request['title'],'content'=>$request['content'],'video'=>$request['video']]);
-            if ($photo = $request->file(['photo'])) {
-                $photo_name = time() . $photo->getClientOriginalName();
-                $photo->move('assets/images', $photo_name);
-                $blog->photos()->create(['path'=>$photo_name]);
+        if(Auth::check()) {
+            if(Auth::user()->email == 'khatnaa3139@gmail.com') {
+                $blog = Blog::create(['title'=>$request['title'],'content'=>$request['content'],'video'=>$request['video']]);
+                if ($photo = $request->file(['photo'])) {
+                    $photo_name = time() . $photo->getClientOriginalName();
+                    $photo->move('assets/images', $photo_name);
+                    $blog->photos()->create(['path'=>$photo_name]);
+                }
+                return redirect('/home/blog');
+            } else {
+                return redirect()->back();
             }
-            return redirect('/home/blog');
-        } else {
-            return redirect()->back();
         }
+
 
     }
     public function remove($id){
-        if(Auth::user()->email == 'khatnaa3139@gmail.com') {
-            $remove=Blog::find($id);
-            $remove->delete();
-            return redirect('/home/blog');
-        } else {
-            return redirect()->back();
+        if(Auth::check()) {
+            if (Auth::user()->email == 'khatnaa3139@gmail.com') {
+                $remove = Blog::find($id);
+                $remove->delete();
+                return redirect('/home/blog');
+            } else {
+                return redirect()->back();
+            }
         }
 
     }
