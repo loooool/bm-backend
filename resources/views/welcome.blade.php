@@ -1,10 +1,10 @@
 @extends('layouts.front')
 @section('header')
-    <meta property="og:url"           content="{{url('/blog'.'/'.$blog->id)}}" />
+    <meta property="og:url"           content="{{url('/')}}" />
     <meta property="og:type"          content="website" />
-    <meta property="og:title"         content="{{$blog->title}}" />
-    <meta property="og:description"   content="<?php echo str_limit($blog->content, 250);?>" />
-    <meta property="og:image"         content="{{asset('assets/images/blog').'/'.$blog->photos->first()->path}}" />
+    <meta property="og:title"         content="Pyramid apartment" />
+    <meta property="og:description"   content="Орчин үеийн дэвшилтэд технологийг инженерийн төгс шийдэлтэй хослуулан, оршин суугчдын тав тухтай, тайван аюулгүй орчинг бүрдүүлэн, евро стандартад нийцсэн материал тоноглолуудыг ашиглаж, шилдэг архитектурын дизайны шийдэлтэй өндөр зэрэглэлийн орон сууцны хотхоныг бид бүтээн байгуулж байна" />
+    <meta property="og:image"         content="{{asset('front/assets/images/slider1.jpg')}}" />
     @endsection
 @section('menu')
             <li class="megamenu active">

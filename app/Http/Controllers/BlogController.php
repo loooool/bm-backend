@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Blog;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 
 class BlogController extends Controller
 {
@@ -18,22 +19,37 @@ class BlogController extends Controller
         return view('post', compact('blog'));
     }
     public function view(){
-        $blog = Blog::all();
-        return view('admin.blog',compact('blog'));
+        if(Auth::user()->email == 'khatnaa3139@gmail.com') {
+            $blog = Blog::all();
+            return view('admin.blog',compact('blog'));
+        } else {
+            return redirect()->back();
+        }
+
     }
     public function store(Request $request) {
-        $blog = Blog::create(['title'=>$request['title'],'content'=>$request['content'],'video'=>$request['video']]);
-        if ($photo = $request->file(['photo'])) {
-            $photo_name = time() . $photo->getClientOriginalName();
-            $photo->move('assets/images', $photo_name);
-            $blog->photos()->create(['path'=>$photo_name]);
+        if(Auth::user()->email == 'khatnaa3139@gmail.com') {
+            $blog = Blog::create(['title'=>$request['title'],'content'=>$request['content'],'video'=>$request['video']]);
+            if ($photo = $request->file(['photo'])) {
+                $photo_name = time() . $photo->getClientOriginalName();
+                $photo->move('assets/images', $photo_name);
+                $blog->photos()->create(['path'=>$photo_name]);
+            }
+            return redirect('/home/blog');
+        } else {
+            return redirect()->back();
         }
-        return redirect('/home/blog');
+
     }
     public function remove($id){
-        $remove=Blog::find($id);
-        $remove->delete();
-        return redirect('/home/blog');
+        if(Auth::user()->email == 'khatnaa3139@gmail.com') {
+            $remove=Blog::find($id);
+            $remove->delete();
+            return redirect('/home/blog');
+        } else {
+            return redirect()->back();
+        }
+
     }
 
 }
