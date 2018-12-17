@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Auth;
 
 class ContractController extends Controller
 {
-    //
+
     public function __construct()
     {
         $this->middleware('user.verification');

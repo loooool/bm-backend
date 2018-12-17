@@ -14,11 +14,9 @@ class AdminUserController extends Controller
         $this->middleware('auth');
         $this->middleware('Administrator');
     }
-
     public function index()
     {
         $members = User::all();
-
         return view('admin.users', compact('members'));
     }
 }

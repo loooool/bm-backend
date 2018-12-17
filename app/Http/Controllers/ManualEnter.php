@@ -16,7 +16,7 @@ class ManualEnter extends Controller
         $this->middleware('Administrator');
     }
     public function index(){
-        $infos = Relation::all();
+        $infos = Relation::all()->where('state',3);
         return view('admin.manual',compact('infos'));
     }
     public function store(Request $request){
