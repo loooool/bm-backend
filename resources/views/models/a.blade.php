@@ -32,9 +32,7 @@
 <div class="row">
     <div class="col-md-1"></div>
     <div class="col-md-7">
-        <div class="sketchfab-embed-wrapper"><iframe width="100%" height="545"  src="https://sketchfab.com/models/89c45d1d5dfa4876ba353c86007084b8/embed" frameborder="0" allow="autoplay; fullscreen; vr" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-
-        </div>
+        <img src="{{asset('front/assets/images/designs/37.85.png')}}" width="100%" style="border-radius: 10px">
         <!--            desription row-->
         <div class="row">
             <div class="col-md-11">

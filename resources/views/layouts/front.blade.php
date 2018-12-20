@@ -6,10 +6,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0, shrink-to-fit=no">
-    <meta name="keywords" content="">
-    <meta name="description" content="">
+    <meta name="keywords" content="байр, байр зарна, байр авах, Pyramid apartment, pyramid, 3 өрөө байр, 2 өрөө байр, 4 өрөө байр">
+    <meta name="description" content="Орчин үеийн дэвшилтэд технологийг инженерийн төгс шийдэлтэй хослуулан, оршин суугчдын тав тухтай, тайван аюулгүй орчинг бүрдүүлэн, евро стандартад нийцсэн материал тоноглолуудыг ашиглаж, шилдэг архитектурын дизайны шийдэлтэй өндөр зэрэглэлийн орон сууцны хотхоныг бид бүтээн байгуулж байна">
 
-    <title>Pyramid Apartments</title>
+    <title>Pyramid Apartment</title>
 
     <!-- FAVICON AND APPLE TOUCH -->
     <link rel="shortcut icon" href="{{asset('front/assets/images/logo_header.png')}}">

@@ -2,7 +2,7 @@
 @section('header')
     <meta property="og:url"           content="{{url('/')}}" />
     <meta property="og:type"          content="website" />
-    <meta property="og:title"         content="Pyramid apartment" />
+    <meta property="og:title"         content="Pyramid Apartment" />
     <meta property="og:description"   content="Орчин үеийн дэвшилтэд технологийг инженерийн төгс шийдэлтэй хослуулан, оршин суугчдын тав тухтай, тайван аюулгүй орчинг бүрдүүлэн, евро стандартад нийцсэн материал тоноглолуудыг ашиглаж, шилдэг архитектурын дизайны шийдэлтэй өндөр зэрэглэлийн орон сууцны хотхоныг бид бүтээн байгуулж байна" />
     <meta property="og:image"         content="{{asset('front/assets/images/slider1.jpg')}}" />
     @endsection

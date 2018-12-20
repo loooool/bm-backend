@@ -32,9 +32,7 @@
     <div class="row">
         <div class="col-md-1"></div>
         <div class="col-md-7">
-            <div class="sketchfab-embed-wrapper"><iframe width="100%" height="545"  src="https://sketchfab.com/models/89c45d1d5dfa4876ba353c86007084b8/embed" frameborder="0" allow="autoplay; fullscreen; vr" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-
-            </div>
+            <img src="{{asset('front/assets/images/designs/54.95.png')}}" width="100%" style="border-radius: 10px">
             <!--            desription row-->
             <div class="row">
                 <div class="col-md-11">
@@ -61,7 +59,7 @@
                         <h4>2 өрөө</h4>
                     </div>
                     <div class="col-md-6">
-                        <h4>54.98мкв</h4>
+                        <h4>54.95мкв</h4>
                     </div>
                 </div>
 
@@ -210,7 +208,7 @@
                         <a href="{{url("/models/10")}}"><img src="{{asset('front/assets/images/67.24.jpg')}}" alt=""></a>
                     </div><!-- image-box-thumbnail -->
 
-                    <h5><a href="{{url("/models/10")}}">j загвар</a></h5>
+                    <h5><a href="{{url("/models/10")}}">J загвар</a></h5>
 
                     <div class="row">
                         <div class="col-md-6 text-center">67.24<br>мкв</div>

@@ -33,7 +33,7 @@ class ContractController extends Controller
                 return redirect('final');
             }
             $location = $request->location;
-            if(Relation::all()->where('block_id', $request['block'])->where('floor_id', $request['floor'])->where('model_id', $request['design'])) {
+            if(Relation::all()->where('block_id', $request['block'])->where('floor_id', $request['floor'])->where('model_id', $request['design'])->first()) {
                 session()->flash('already');
                 return redirect('models');
             } else {
