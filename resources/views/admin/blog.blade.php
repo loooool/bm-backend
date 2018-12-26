@@ -53,7 +53,7 @@
                                 @if($blo->photos->first() == '')
                                     <td>Зураггүй</td>
                                 @else
-                                    <td><img width="50px" src="{{asset('assets/images/'.$blo->photos->first()->path)}}"></td>
+                                    <td><img width="50px" src="{{asset('assets/images/uploads/'.$blo->photos->first()->path)}}"></td>
                                 @endif
                                 <td>{{$blo->created_at}}</td>
                                 <td><a href="{{url('/home/blog').'/'.$blo->id}}"><i style="font-size: 20px" class="mdi mdi-delete"></i></a></td>

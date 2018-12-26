@@ -52,7 +52,7 @@
                         </ul><!-- blog-article-details -->
                         <br>
                         <div class="blog-article-thumbnail">
-                            <a href="{{url('/blog'.'/'.$blog->id)}}"><img src="@if($blog->photos->first()){{asset('assets/images').'/'.$blog->photos->first()->path}}"@endif alt=""></a>
+                            <a href="{{url('/blog'.'/'.$blog->id)}}"><img src="@if($blog->photos->first()){{asset('assets/images/uploads').'/'.$blog->photos->first()->path}}"@endif alt=""></a>
                         </div><!-- blog-article-thumbnail -->
 
                         <div class="blog-article-content">

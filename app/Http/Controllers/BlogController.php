@@ -36,7 +36,7 @@ class BlogController extends Controller
                 $blog = Blog::create(['title'=>$request['title'],'content'=>$request['content'],'video'=>$request['video']]);
                 if ($photo = $request->file(['photo'])) {
                     $photo_name = time() . $photo->getClientOriginalName();
-                    $photo->move('assets/images', $photo_name);
+                    $photo->move('assets/images/uploads', $photo_name);
                     $blog->photos()->create(['path'=>$photo_name]);
                 }
                 return redirect('/home/blog');
