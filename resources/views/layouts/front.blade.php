@@ -170,7 +170,7 @@
                     <div class="col-md-6">
                         <div class="widget widget-text">
                             <div>
-                                <p class="copyright"><img src="{{asset('front/assets/images/gym.png')}}" alt="" width="25" height="25r">  <b>© 2018 BM consultant</b> ВЭБ САЙТЫГ BodyTech XXK ХӨГЖҮҮЛЭВ. (+976-95520073)</p>
+                                <p class="copyright"><b>© 2018 BM consultant</b> ВЭБ САЙТЫГ BodyTech XXK ХӨГЖҮҮЛЭВ. (+976-95520073)</p>
                             </div>
 
                         </div><!-- widget-text -->

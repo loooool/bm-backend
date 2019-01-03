@@ -34,20 +34,20 @@
     <div class="col-md-7">
         <img src="{{asset('front/assets/images/designs/37.85.png')}}" width="100%" style="border-radius: 10px">
         <!--            desription row-->
-        <div class="row">
-            <div class="col-md-11">
-                <br>
-                <h3>Description</h3>
-                <div class="row">
-                    <div class="col-md-11">
+        {{--<div class="row">--}}
+            {{--<div class="col-md-11">--}}
+                {{--<br>--}}
+                {{--<h3>Description</h3>--}}
+                {{--<div class="row">--}}
+                    {{--<div class="col-md-11">--}}
 
-                        <p>Lorem ipsum</p>
-                    </div>
-                    <div class="col-md-1"></div>
-                </div>
-            </div>
-            <div class="col-md-1"></div>
-        </div>
+                        {{--<p>Lorem ipsum</p>--}}
+                    {{--</div>--}}
+                    {{--<div class="col-md-1"></div>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+            {{--<div class="col-md-1"></div>--}}
+        {{--</div>--}}
         <!--            description end-->
     </div>
 
