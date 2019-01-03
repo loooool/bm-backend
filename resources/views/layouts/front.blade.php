@@ -102,7 +102,7 @@
 
 
     <!-- PAGE CONTENT -->
-    <div id="page-content">
+    <div id="page-content" style="padding-bottom: 0px">
         @yield('content')
     </div><!-- PAGE CONTENT -->
 

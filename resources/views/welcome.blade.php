@@ -21,7 +21,6 @@
             </li>
     @endsection
 @section('content')
-
     <div class="rev_slider_wrapper no-margin-bottom">
         <div class="rev_slider" data-version="5.0">
             <ul>
@@ -513,9 +512,9 @@
             <a href="{{url('models')}}">
                 <button class="btn btn-white btn-outline waves waves-dark">ЗАХИАЛГА ӨГӨХ</button>
             </a>
-
         </div><!-- headline -->
     </section>
+    <iframe style="margin-bottom: -10px" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2628.3602385933877!2d106.77115531560372!3d47.85581097920194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5d96eb3d4bfbfaf5%3A0xf135181d30f362d2!2zNDfCsDUxJzIwLjkiTiAxMDbCsDQ2JzI0LjAiRQ!5e1!3m2!1smn!2smn!4v1546493066102" width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
     @endsection
 @section('footer')
     @endsection
