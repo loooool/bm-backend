@@ -41,7 +41,24 @@
     <div class="headline text-center no-margin-bottom">
 
 
-        <h6>PYRAMID APARTMENT</h6>
+        <h6>PYRAMID APARTMENT<br>
+            @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
+            @if(session()->has('login'))
+                <div class="alert alert-danger">
+                    <ul>
+                        <li>Уучлаарай утга буруу байна</li>
+                    </ul>
+                </div>
+            @endif
+        </h6>
         <!--<h3 id="blocka">БҮРТГҮҮЛЭХ</h3>-->
         <br>
 
