@@ -25,7 +25,7 @@ Route::get('test', function () {
 });
 
 Route::get('/', function () {
-    $d = strtotime("-2 weeks");
+    $d = strtotime("-1 weeks");
     $relations = \App\Relation::where('state', 1)->whereDate('updated_at', '<', date('Y-m-d', $d));
     foreach ($relations->get() as $relation) {
         $relation->contract->delete();
