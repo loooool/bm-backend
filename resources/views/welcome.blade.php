@@ -63,7 +63,7 @@
                          data-speed="300"
                          data-transform_in="o:0;s:400;e:Power2.easeInOut;"
                          data-transform_out="o:0;s:400;e:Power2.easeInOut;">
-                        <span>01</span>/04
+                        <span>01</span>/07
                     </div>
                     <div class="tp-static-layers">
                         <div class="tp-caption tp-resizeme tp-static-layer"
@@ -118,7 +118,7 @@
                          data-speed="300"
                          data-transform_in="o:0;s:400;e:Power2.easeInOut;"
                          data-transform_out="o:0;s:400;e:Power2.easeInOut;">
-                        <span>02</span>/04
+                        <span>02</span>/07
                     </div>
                     <div class="tp-static-layers">
                         <div class="tp-caption tp-resizeme tp-static-layer"
@@ -173,7 +173,7 @@
                          data-speed="300"
                          data-transform_in="o:0;s:400;e:Power2.easeInOut;"
                          data-transform_out="o:0;s:400;e:Power2.easeInOut;">
-                        <span>03</span>/04
+                        <span>03</span>/07
                     </div>
                     <div class="tp-static-layers">
                         <div class="tp-caption tp-resizeme tp-static-layer"
@@ -229,7 +229,110 @@
                          data-speed="300"
                          data-transform_in="o:0;s:400;e:Power2.easeInOut;"
                          data-transform_out="o:0;s:400;e:Power2.easeInOut;">
-                        <span>04</span>/04
+                        <span>04</span>/07
+                    </div>
+                    <div class="tp-static-layers">
+                        <div class="tp-caption tp-resizeme tp-static-layer"
+                             data-x="20"
+                             data-y="560"
+                             data-voffset="120"
+                             data-start="0"
+                             data-startslide="0"
+                             data-transform_in="o:0;s:400;e:Power2.easeInOut;"
+                             data-transform_out="o:0;s:400;e:Power2.easeInOut;">
+                            <a id="next-section" href="#next-section"><i class="fa fa-angle-down"></i> scroll down</a>
+                        </div>
+                    </div>
+
+                </li>
+                <li data-transition="fade" data-thumb="{{asset('front/assets/images/slide5.jpg')}}">
+
+                    <img  src="{{asset('front/assets/images/slide5.jpg')}}" alt="" data-bgposition="center center" data-kenburns="on" data-duration="15000" data-scalestart="100" data-scaleend="120">
+
+                    <div class="overlay-blend-mode"></div>
+
+
+
+
+                    <div class="tp-caption navigation"
+                         data-x="right"
+                         data-y="560"
+                         data-hoffset="20"
+                         data-voffset="120"
+                         data-start="0"
+                         data-speed="300"
+                         data-transform_in="o:0;s:400;e:Power2.easeInOut;"
+                         data-transform_out="o:0;s:400;e:Power2.easeInOut;">
+                        <span>05</span>/07
+                    </div>
+                    <div class="tp-static-layers">
+                        <div class="tp-caption tp-resizeme tp-static-layer"
+                             data-x="20"
+                             data-y="560"
+                             data-voffset="120"
+                             data-start="0"
+                             data-startslide="0"
+                             data-transform_in="o:0;s:400;e:Power2.easeInOut;"
+                             data-transform_out="o:0;s:400;e:Power2.easeInOut;">
+                            <a id="next-section" href="#next-section"><i class="fa fa-angle-down"></i> scroll down</a>
+                        </div>
+                    </div>
+
+                </li>
+
+                <li data-transition="fade" data-thumb="{{asset('front/assets/images/slide6.jpg')}}">
+
+                    <img  src="{{asset('front/assets/images/slide6.jpg')}}" alt="" data-bgposition="center center" data-kenburns="on" data-duration="15000" data-scalestart="100" data-scaleend="120">
+
+                    <div class="overlay-blend-mode"></div>
+
+
+
+
+                    <div class="tp-caption navigation"
+                         data-x="right"
+                         data-y="560"
+                         data-hoffset="20"
+                         data-voffset="120"
+                         data-start="0"
+                         data-speed="300"
+                         data-transform_in="o:0;s:400;e:Power2.easeInOut;"
+                         data-transform_out="o:0;s:400;e:Power2.easeInOut;">
+                        <span>06</span>/07
+                    </div>
+                    <div class="tp-static-layers">
+                        <div class="tp-caption tp-resizeme tp-static-layer"
+                             data-x="20"
+                             data-y="560"
+                             data-voffset="120"
+                             data-start="0"
+                             data-startslide="0"
+                             data-transform_in="o:0;s:400;e:Power2.easeInOut;"
+                             data-transform_out="o:0;s:400;e:Power2.easeInOut;">
+                            <a id="next-section" href="#next-section"><i class="fa fa-angle-down"></i> scroll down</a>
+                        </div>
+                    </div>
+
+                </li>
+                <li data-transition="fade" data-thumb="{{asset('front/assets/images/slide7.jpg')}}">
+
+                    <img  src="{{asset('front/assets/images/slide7.jpg')}}" alt="" data-bgposition="center center" data-kenburns="on" data-duration="15000" data-scalestart="100" data-scaleend="120">
+
+                    <div class="overlay-blend-mode"></div>
+
+
+
+
+                    <div class="tp-caption navigation"
+                         data-x="right"
+                         data-y="560"
+                         data-hoffset="20"
+                         data-voffset="120"
+                         data-start="0"
+                         data-speed="300"
+                         data-transform_in="o:0;s:400;e:Power2.easeInOut;"
+                         data-transform_out="o:0;s:400;e:Power2.easeInOut;">
+                        <span>07</span>/07
                     </div>
                     <div class="tp-static-layers">
                         <div class="tp-caption tp-resizeme tp-static-layer"
