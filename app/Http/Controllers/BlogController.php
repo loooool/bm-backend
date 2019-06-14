@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Auth;
 
 class BlogController extends Controller
 {
+
   //niitlel bichih controller
     public function index() {
         $blogs = Blog::all()->sortByDesc('created_at');
@@ -20,7 +21,7 @@ class BlogController extends Controller
     }
     public function view(){
         if(Auth::check()) {
-        if(Auth::user()->email == 'khatnaa3139@gmail.com') {
+        if(Auth::user()->email == 'admin@gmail.com') {
             $blog = Blog::all();
             return view('admin.blog',compact('blog'));
         } else {
@@ -32,7 +33,7 @@ class BlogController extends Controller
     }
     public function store(Request $request) {
         if(Auth::check()) {
-            if(Auth::user()->email == 'khatnaa3139@gmail.com') {
+            if(Auth::user()->email == 'admin@gmail.com') {
                 $blog = Blog::create(['title'=>$request['title'],'content'=>$request['content'],'video'=>$request['video']]);
                 if ($photo = $request->file(['photo'])) {
                     $photo_name = time() . $photo->getClientOriginalName();
@@ -49,7 +50,7 @@ class BlogController extends Controller
     }
     public function remove($id){
         if(Auth::check()) {
-            if (Auth::user()->email == 'khatnaa3139@gmail.com') {
+            if (Auth::user()->email == 'admin@gmail.com') {
                 $remove = Blog::find($id);
                 $remove->delete();
                 return redirect('/home/blog');
