@@ -17,7 +17,7 @@ class Administrator
     public function handle($request, Closure $next)
     {
         if (Auth::check()){
-            if (Auth::user()->email == 'khatnaa3139@gmail.com'){
+            if (Auth::user()->email == 'admin@gmail.com'){
                 return $next($request);
             }
             else { return redirect('/');
