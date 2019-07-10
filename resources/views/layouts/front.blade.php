@@ -60,7 +60,7 @@
 
 </head>
 
-<body class="header-modern footer-dark">
+<body class="header-modern ">
 
 <div id="main-container">
 
@@ -113,13 +113,13 @@
 
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-3">
 
                         <div class="widget widget-text">
 
                             <div>
 
-                                <p><img src="{{asset('front/assets/images/logo_white.png')}}" alt=""></p>
+                                <p><img src="{{asset('front/assets/images/logo_sh.png')}}" alt=""></p>
                                 <br>
                                 <!--								<p>Description bichih ystoi uchir eniig daraa ni hiij bolno. odoohondoo uur umandaa anhaarah.</p>-->
 
@@ -150,13 +150,19 @@
                         <div class="widget widget-pages">
 
                             <h6 class="widget-title">Холбоо барих</h6>
-                            <p>Хаяг: Улаанбаатар, Сүхбаатар дүүрэг, Юнион Бюлдинг, А корпус, 3-н давхар, 308 тоот</p>
+                            <p>Хаяг: Улаанбаатар, Хан-Уул дүүрэг, 10-р хороо, Пирамид Апартмент хотхон</p>
                             <br>
-                            <p>Цахим шуудан:  marketing@bmconsult.mn
-                                <br>Утас: 80261111, 80262222</p>
+
                         </div><!-- widget-pages -->
 
                     </div><!-- col -->
+                    <div class="col-md-3">
+                        <br>
+                        <br>
+                        <p>Цахим шуудан:  marketing@badrakhmanagement.mn
+                            <br>Утас: 80261111, 80262222
+                            <br>Цагийн хуваарь:<br> Да-Ня: 09:00 - 18:00</p>
+                    </div>
 
                 </div><!-- row -->
             </div><!-- container -->
@@ -170,7 +176,7 @@
                     <div class="col-md-6">
                         <div class="widget widget-text">
                             <div>
-                                <p class="copyright"><b>© 2018 BM consultant</b> ВЭБ САЙТЫГ BodyTech XXK ХӨГЖҮҮЛЭВ. (+976-95520073)</p>
+                                {{--<p class="copyright"><b>© 2018 BM consultant</b> ВЭБ САЙТЫГ BodyTech XXK ХӨГЖҮҮЛЭВ. (+976-95520073)</p>--}}
                             </div>
 
                         </div><!-- widget-text -->
