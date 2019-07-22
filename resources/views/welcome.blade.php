@@ -793,12 +793,8 @@
             <div class="col-md-12">
 
                 <div class="owl-carousel images-slider">
-                    <div class="item">
-                        <img src="{{asset('front/assets/images/show/1.jpg')}}" alt="">
-                    </div><!-- item -->
-                    <div class="item">
-                        <img src="{{asset('front/assets/images/show/2.jpg')}}" alt="">
-                    </div><!-- item -->
+
+
                     <div class="item">
                         <img src="{{asset('front/assets/images/show/3.jpg')}}" alt="">
                     </div><!-- item -->
@@ -808,9 +804,7 @@
                     <div class="item">
                         <img src="{{asset('front/assets/images/show/5.jpg')}}" alt="">
                     </div><!-- item -->
-                    <div class="item">
-                        <img src="{{asset('front/assets/images/show/6.jpg')}}" alt="">
-                    </div><!-- item -->
+
                 </div><!-- images-slider -->
 
             </div><!-- col -->
