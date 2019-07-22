@@ -24,35 +24,12 @@
     <div class="rev_slider_wrapper no-margin-bottom">
         <div class="rev_slider" data-version="5.0">
             <ul>
-                <li data-transition="fade" data-thumb="{{asset('front/assets/images/show/slide1.jpg')}}">
+                <li data-transition="fade" data-thumb="{{asset('front/assets/images/2.jpg')}}">
 
-                    <img  src="{{asset('front/assets/images/show/slide1.jpg')}}" alt="" data-bgposition="center center" data-kenburns="on" data-duration="15000" data-scalestart="100" data-scaleend="120">
+                    <img  src="{{asset('front/assets/images/2.jpg')}}" alt="" data-bgposition="center center" data-kenburns="on" data-duration="15000" data-scalestart="100" data-scaleend="100">
 
                     <div class="overlay-blend-mode"></div>
 
-
-                    <div class="tp-caption title"
-                         data-x="center"
-                         data-y="300"
-                         data-voffset="50"
-                         data-start="1300"
-                         data-speed="300"
-                         data-textalign="center"
-                         data-transform_in="o:0;y:100;s:500;e:Power2.easeInOut;"
-                         data-transform_out="o:0;y:-100;s:500;e:Power2.easeInOut;">
-                        Амьдралд гэрэл<br> гэгээ нэмнэ
-                    </div>
-
-                    <div class="tp-caption text"
-                         data-x="center"
-                         data-y="460"
-                         data-voffset="150"
-                         data-start="1400"
-                         data-speed="300"
-                         data-transform_in="o:0;y:100;s:400;e:Power2.easeInOut;"
-                         data-transform_out="o:0;y:-100;s:400;e:Power2.easeInOut;">
-                        <em>*BMconsultant*</em>
-                    </div>
 
                     <div class="tp-caption navigation"
                          data-x="right"
@@ -63,7 +40,7 @@
                          data-speed="300"
                          data-transform_in="o:0;s:400;e:Power2.easeInOut;"
                          data-transform_out="o:0;s:400;e:Power2.easeInOut;">
-                        <span>01</span>/07
+                        <span>01</span>/05
                     </div>
                     <div class="tp-static-layers">
                         <div class="tp-caption tp-resizeme tp-static-layer"
@@ -79,24 +56,14 @@
                     </div>
 
                 </li>
-                <li data-transition="fade" data-thumb="{{asset('front/assets/images/show/3.jpg')}}">
+                <li data-transition="fade" data-thumb="{{asset('front/assets/images/1050.jpg')}}">
 
-                    <img  src="{{asset('front/assets/images/show/3.jpg')}}" alt="" data-bgposition="center center" data-kenburns="on" data-duration="15000" data-scalestart="100" data-scaleend="120">
+                    <img  src="{{asset('front/assets/images/1050.jpg')}}" alt="" data-bgposition="center center" data-kenburns="on" data-duration="15000" data-scalestart="100" data-scaleend="100">
 
                     <div class="overlay-blend-mode"></div>
 
 
-                    <div class="tp-caption title"
-                         data-x="center"
-                         data-y="300"
-                         data-voffset="50"
-                         data-start="1300"
-                         data-speed="300"
-                         data-textalign="center"
-                         data-transform_in="o:0;y:100;s:500;e:Power2.easeInOut;"
-                         data-transform_out="o:0;y:-100;s:500;e:Power2.easeInOut;">
-                        Тав тухтай <br>цэвэр цэмцгэр орчин
-                    </div>
+
 
                     <div class="tp-caption text"
                          data-x="center"
@@ -118,7 +85,7 @@
                          data-speed="300"
                          data-transform_in="o:0;s:400;e:Power2.easeInOut;"
                          data-transform_out="o:0;s:400;e:Power2.easeInOut;">
-                        <span>02</span>/07
+                        <span>02</span>/05
                     </div>
                     <div class="tp-static-layers">
                         <div class="tp-caption tp-resizeme tp-static-layer"
@@ -134,24 +101,14 @@
                     </div>
 
                 </li>
-                <li data-transition="fade" data-thumb="{{asset('front/assets/images/show/slide3.jpg')}}">
+                <li data-transition="fade" data-thumb="{{asset('front/assets/images/1.jpg')}}">
 
-                    <img  src="{{asset('front/assets/images/show/slide3.jpg')}}" alt="" data-bgposition="center center" data-kenburns="on" data-duration="15000" data-scalestart="100" data-scaleend="120">
+                    <img  src="{{asset('front/assets/images/1.jpg')}}" alt="" data-bgposition="center center" data-kenburns="on" data-duration="15000" data-scalestart="100" data-scaleend="100">
 
                     <div class="overlay-blend-mode"></div>
 
 
-                    <div class="tp-caption title"
-                         data-x="center"
-                         data-y="300"
-                         data-voffset="50"
-                         data-start="1300"
-                         data-speed="300"
-                         data-textalign="center"
-                         data-transform_in="o:0;y:100;s:500;e:Power2.easeInOut;"
-                         data-transform_out="o:0;y:-100;s:500;e:Power2.easeInOut;">
-                        Хүүхэд тань <br> ээлтэй байгууламж
-                    </div>
+
 
                     <div class="tp-caption text"
                          data-x="center"
@@ -173,7 +130,7 @@
                          data-speed="300"
                          data-transform_in="o:0;s:400;e:Power2.easeInOut;"
                          data-transform_out="o:0;s:400;e:Power2.easeInOut;">
-                        <span>03</span>/07
+                        <span>03</span>/05
                     </div>
                     <div class="tp-static-layers">
                         <div class="tp-caption tp-resizeme tp-static-layer"
@@ -190,24 +147,13 @@
 
                 </li>
 
-                <li data-transition="fade" data-thumb="{{asset('front/assets/images/show/slide2.jpg')}}">
+                <li data-transition="fade" data-thumb="{{asset('front/assets/images/3.jpg')}}">
 
-                    <img  src="{{asset('front/assets/images/show/slide2.jpg')}}" alt="" data-bgposition="center center" data-kenburns="on" data-duration="15000" data-scalestart="100" data-scaleend="120">
+                    <img  src="{{asset('front/assets/images/3.jpg')}}" alt="" data-bgposition="center center" data-kenburns="on" data-duration="15000" data-scalestart="100" data-scaleend="100">
 
                     <div class="overlay-blend-mode"></div>
 
 
-                    <div class="tp-caption title"
-                         data-x="center"
-                         data-y="300"
-                         data-voffset="50"
-                         data-start="1300"
-                         data-speed="300"
-                         data-textalign="center"
-                         data-transform_in="o:0;y:100;s:500;e:Power2.easeInOut;"
-                         data-transform_out="o:0;y:-100;s:500;e:Power2.easeInOut;">
-                        Найрсаг орчин
-                    </div>
 
                     <div class="tp-caption text"
                          data-x="center"
@@ -229,7 +175,7 @@
                          data-speed="300"
                          data-transform_in="o:0;s:400;e:Power2.easeInOut;"
                          data-transform_out="o:0;s:400;e:Power2.easeInOut;">
-                        <span>04</span>/07
+                        <span>04</span>/05
                     </div>
                     <div class="tp-static-layers">
                         <div class="tp-caption tp-resizeme tp-static-layer"
@@ -245,9 +191,9 @@
                     </div>
 
                 </li>
-                <li data-transition="fade" data-thumb="{{asset('front/assets/images/show/slide3.jpg')}}">
+                <li data-transition="fade" data-thumb="{{asset('front/assets/images/105d0.jpg')}}">
 
-                    <img  src="{{asset('front/assets/images/show/slide3.jpg')}}" alt="" data-bgposition="center center" data-kenburns="on" data-duration="15000" data-scalestart="100" data-scaleend="120">
+                    <img  src="{{asset('front/assets/images/105d0.jpg')}}" alt="" data-bgposition="center center" data-kenburns="on" data-duration="15000" data-scalestart="100" data-scaleend="100">
 
                     <div class="overlay-blend-mode"></div>
 
@@ -263,7 +209,7 @@
                          data-speed="300"
                          data-transform_in="o:0;s:400;e:Power2.easeInOut;"
                          data-transform_out="o:0;s:400;e:Power2.easeInOut;">
-                        <span>05</span>/07
+                        <span>05</span>/05
                     </div>
                     <div class="tp-static-layers">
                         <div class="tp-caption tp-resizeme tp-static-layer"
@@ -279,78 +225,6 @@
                     </div>
 
                 </li>
-
-                <li data-transition="fade" data-thumb="{{asset('front/assets/images/slide6.jpg')}}">
-
-                    <img  src="{{asset('front/assets/images/slide6.jpg')}}" alt="" data-bgposition="center center" data-kenburns="on" data-duration="15000" data-scalestart="100" data-scaleend="120">
-
-                    <div class="overlay-blend-mode"></div>
-
-
-
-
-                    <div class="tp-caption navigation"
-                         data-x="right"
-                         data-y="560"
-                         data-hoffset="20"
-                         data-voffset="120"
-                         data-start="0"
-                         data-speed="300"
-                         data-transform_in="o:0;s:400;e:Power2.easeInOut;"
-                         data-transform_out="o:0;s:400;e:Power2.easeInOut;">
-                        <span>06</span>/07
-                    </div>
-                    <div class="tp-static-layers">
-                        <div class="tp-caption tp-resizeme tp-static-layer"
-                             data-x="20"
-                             data-y="560"
-                             data-voffset="120"
-                             data-start="0"
-                             data-startslide="0"
-                             data-transform_in="o:0;s:400;e:Power2.easeInOut;"
-                             data-transform_out="o:0;s:400;e:Power2.easeInOut;">
-                            <a id="next-section" href="#next-section"><i class="fa fa-angle-down"></i> scroll down</a>
-                        </div>
-                    </div>
-
-                </li>
-                <li data-transition="fade" data-thumb="{{asset('front/assets/images/show/4.jpg')}}">
-
-                    <img  src="{{asset('front/assets/images/show/4.jpg')}}" alt="" data-bgposition="center center" data-kenburns="on" data-duration="15000" data-scalestart="100" data-scaleend="120">
-
-                    <div class="overlay-blend-mode"></div>
-
-
-
-
-                    <div class="tp-caption navigation"
-                         data-x="right"
-                         data-y="560"
-                         data-hoffset="20"
-                         data-voffset="120"
-                         data-start="0"
-                         data-speed="300"
-                         data-transform_in="o:0;s:400;e:Power2.easeInOut;"
-                         data-transform_out="o:0;s:400;e:Power2.easeInOut;">
-                        <span>07</span>/07
-                    </div>
-                    <div class="tp-static-layers">
-                        <div class="tp-caption tp-resizeme tp-static-layer"
-                             data-x="20"
-                             data-y="560"
-                             data-voffset="120"
-                             data-start="0"
-                             data-startslide="0"
-                             data-transform_in="o:0;s:400;e:Power2.easeInOut;"
-                             data-transform_out="o:0;s:400;e:Power2.easeInOut;">
-                            <a id="next-section" href="#next-section"><i class="fa fa-angle-down"></i> scroll down</a>
-                        </div>
-                    </div>
-
-                </li>
-
-
-
 
 
             </ul>
@@ -395,7 +269,7 @@
                         <div class="col-lg-10 col-md-11 ml-auto mr-auto">
 
                             <p class="text-center">
-                                Pyramid Apartment хотхоны  1-р ээлж нь Улаанбаатар хотын хамгийн үнэ цэнэтэй бүс болох Буянт-Ухаа Олон улсын нисэх онгоцны буудалтай ойр, хүн амын нягтаршилаас зайдуу 314 айлын Солонгос технологиор өвөрмөц хийцтэй, экстерьерийн өвөрмөц хийцтэй, интерьерийн оновчтой шийдэл бүхий 12 давхар 3 орон сууцны барилга, оршин суугчдад хэрэгцээт худалдаа үйлчилгээг цогцоор нь шийдсэн хотхон юм.
+                                ПИРАМИД АПАРТМЕНТ хотхон нь Чингис хаан Олон улсын нисэх буудлын  зүүн талд байрлалтай, үйлчилгээний төв, 314 айлын орон сууц бүхий 3 блок барилга юм.  Түүнчлэн ПИРАМИД АПАРТМЕНТ хотхоны оршин суугчдынхаа бүхий л хэрэгцээ шаардлагыг хангах 4 давхар үйлчилгээний төвтэй байх юм.
                                 <br>
                                 <br>
                                 Та манай хотхоныг сонгосноор гэр бүлийн тав тухтай орчин, аз
@@ -805,7 +679,7 @@
         <div class="full-section-overlay" data-opacity="69"></div>
 
         <div class="half-image-right wow fadeInRight" style="background-image: url({{asset('front/assets/images/interior.jpg')}});">
-            <img src="{{asset('front/assets/images/interior.jpg')}}" alt="">
+            <img src="{{asset('front/assets/images/2.jpg')}}" alt="">
         </div><!-- half-image-left -->
     </section><!-- full-section -->
 
@@ -936,9 +810,6 @@
                     </div><!-- item -->
                     <div class="item">
                         <img src="{{asset('front/assets/images/show/6.jpg')}}" alt="">
-                    </div><!-- item -->
-                    <div class="item">
-                        <img src="{{asset('front/assets/images/show/7.jpg')}}" alt="">
                     </div><!-- item -->
                 </div><!-- images-slider -->
 
