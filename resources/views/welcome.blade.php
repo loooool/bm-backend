@@ -514,8 +514,8 @@
         </div><!-- full-section-container -->
         <div class="full-section-overlay" data-opacity="69"></div>
 
-        <div class="half-image-right wow fadeInRight" style="background-image: url({{asset('front/assets/images/slider1.jpg')}});">
-            <img src="{{asset('front/assets/images/slider1.jpg')}}" alt="">
+        <div class="half-image-right wow fadeInRight" style="background-image: url({{asset('front/assets/images/67480891_901741390171775_1135271662921449472_n.jpg')}});">
+            <img src="{{asset('front/assets/images/67480891_901741390171775_1135271662921449472_n.jpg')}}" alt="">
         </div><!-- half-image-left -->
     </section><!-- full-section -->
 
